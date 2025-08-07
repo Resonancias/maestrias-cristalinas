@@ -90,7 +90,7 @@ document.getElementById('app').innerHTML = `
         </div>
         <div class="flex justify-center">
           <img 
-            src="<img src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg" alt="Leon-blanco" border="0">" 
+            src="<img src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg">" 
             alt="León Meotto - Terapeuta Energético" 
             class="rounded-2xl shadow-xl w-80 object-cover">
         </div>
@@ -203,3 +203,4 @@ document.getElementById('app').innerHTML = `
     </footer>
   </div>
 `;
+

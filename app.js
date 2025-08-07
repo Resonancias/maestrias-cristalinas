@@ -53,7 +53,7 @@ document.getElementById('app').innerHTML = `
       <div class="flex justify-center">
         <div class="w-full md:w-2/3 lg:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-2xl">
           <iframe 
-            src="https://youtube.com/shorts/OA49Z0f4QVM?si=8tB-EruiwkS3NfP8" 
+            src="https://youtube.com/shorts/OA49Z0f4QVM?si=2avCqRsnALA6DTgG" 
             title="Video de bienvenida - León Meotto"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -90,7 +90,7 @@ document.getElementById('app').innerHTML = `
         </div>
         <div class="flex justify-center">
           <img 
-            src="<img src="https://https://ibb.co/xSvKwM1G">" 
+            src="<img src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg" alt="Leon-blanco" border="0">" 
             alt="León Meotto - Terapeuta Energético" 
             class="rounded-2xl shadow-xl w-80 object-cover">
         </div>
@@ -203,5 +203,6 @@ document.getElementById('app').innerHTML = `
     </footer>
   </div>
 `;
+
 
 

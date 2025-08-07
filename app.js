@@ -53,7 +53,7 @@ document.getElementById('app').innerHTML = `
       <div class="flex justify-center">
         <div class="w-full md:w-2/3 lg:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-2xl">
           <iframe 
-            src="https://youtube.com/shorts/OA49Z0f4QVM?si=2avCqRsnALA6DTgG" 
+            src="https://youtube.com/shorts/OA49Z0f4QVM?si=MDJ0HGb3Myo7nE8v" 
             title="Video de bienvenida - León Meotto"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -203,6 +203,7 @@ document.getElementById('app').innerHTML = `
     </footer>
   </div>
 `;
+
 
 
 

@@ -28,7 +28,7 @@ document.getElementById('app').innerHTML = `
         </span>
       </h2>
       <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-        Transforma tu vida y la de otros a través del poder sanador de los cristales. 
+        Un camino de transformación a través del lenguaje sagrado de los Cristales. 
         Formación completa para convertirte en un maestro sanador energético.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -139,4 +139,5 @@ document.getElementById('app').innerHTML = `
       <p>&copy; 2024 Resonancias en salud y vida®. Todo es vibración de amor.</p>
     </footer>
   </div>
+
 `;

@@ -1,22 +1,26 @@
 document.getElementById('app').innerHTML = `
   <div class="max-w-6xl mx-auto px-4 py-12">
-    <header class="flex justify-between items-center mb-12">
-      <div class="flex items-center space-x-2">
-        <div class="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-          <span class="text-white font-bold">R</span>
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-16">
+      <div class="flex items-center space-x-3">
+        <!-- Isologo -->
+        <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+          <span class="text-white font-bold text-xl">R</span>
         </div>
         <div>
-          <h1 class="text-xl font-bold text-gray-900">Resonancias</h1>
-          <p class="text-xs text-purple-600">Maestrías Cristalinas</p>
+          <h1 class="text-2xl font-bold text-gray-900">Resonancias</h1>
+          <p class="text-sm text-purple-600 font-medium">en salud y vida®</p>
         </div>
       </div>
       <nav class="hidden md:flex space-x-6">
         <a href="#inicio" class="text-gray-700 hover:text-purple-600 font-medium">Inicio</a>
+        <a href="#sobre-leon" class="text-gray-700 hover:text-purple-600 font-medium">Sobre León</a>
         <a href="#formacion" class="text-gray-700 hover:text-purple-600 font-medium">Formación</a>
         <a href="#contacto" class="text-gray-700 hover:text-purple-600 font-medium">Contacto</a>
       </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="inicio" class="text-center py-16">
       <div class="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-800 text-sm font-medium mb-8">
         🌟 Todo es vibración de amor
@@ -43,6 +47,57 @@ document.getElementById('app').innerHTML = `
       </div>
     </section>
 
+    <!-- Video de Bienvenida -->
+    <section class="my-20">
+      <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Bienvenida</h3>
+      <div class="flex justify-center">
+        <div class="w-full md:w-2/3 lg:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-2xl">
+          <iframe 
+            src="https://youtube.com/shorts/OA49Z0f4QVM?si=8tB-EruiwkS3NfP8" 
+            title="Video de bienvenida - León Meotto"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            class="w-full h-full">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre León Meotto -->
+    <section id="sobre-leon" class="my-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">León Meotto</h3>
+          <p class="text-lg text-gray-600 mb-4">
+            Terapeuta energético, formador y guía espiritual con más de 15 años de experiencia 
+            en sanación con cristales, geometría sagrada y técnicas ancestrales.
+          </p>
+          <p class="text-lg text-gray-600 mb-6">
+            Fundador de <strong>Resonancias en salud y vida®</strong>, acompaña a personas de todo el mundo 
+            en su proceso de transformación interior a través del poder sanador de la vibración.
+          </p>
+          <div class="flex space-x-4">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-purple-600">15+</div>
+              <div class="text-sm text-gray-500">Años de experiencia</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-pink-600">1000+</div>
+              <div class="text-sm text-gray-500">Alumnos transformados</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <img 
+            src="<img src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg" alt="Leon-blanco" border="0">" 
+            alt="León Meotto - Terapeuta Energético" 
+            class="rounded-2xl shadow-xl w-80 object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Formación -->
     <section id="formacion" class="py-16">
       <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Nuestros Programas</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -112,6 +167,7 @@ document.getElementById('app').innerHTML = `
       </div>
     </section>
 
+    <!-- Contacto -->
     <section id="contacto" class="py-16">
       <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
         <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Accede a tu Clase Gratuita</h3>
@@ -120,10 +176,10 @@ document.getElementById('app').innerHTML = `
             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             required>
           <input type="email" placeholder="Correo electrónico" 
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
             required>
           <input type="tel" placeholder="WhatsApp (opcional)" 
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
           <button type="submit"
             class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg">
             Acceder a Clase Gratuita
@@ -135,9 +191,15 @@ document.getElementById('app').innerHTML = `
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="mt-16 pt-8 border-t border-gray-200 text-center text-gray-600">
+      <div class="flex justify-center space-x-8 mb-4">
+        <a href="#" class="text-gray-500 hover:text-purple-600">Terapias</a>
+        <a href="#" class="text-gray-500 hover:text-purple-600">Tienda</a>
+        <a href="#" class="text-gray-500 hover:text-purple-600">Blog</a>
+        <a href="#" class="text-gray-500 hover:text-purple-600">Políticas</a>
+      </div>
       <p>&copy; 2024 Resonancias en salud y vida®. Todo es vibración de amor.</p>
     </footer>
   </div>
-
 `;

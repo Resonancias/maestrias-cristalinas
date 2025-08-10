@@ -224,28 +224,47 @@
         required 
         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
 
-<label for="whatsapp" class="block text-sm font-medium text-gray-700">
+<!-- Campo WhatsApp mejorado con código de país editable -->
+<label for="phone" class="block text-sm font-medium text-gray-700">
   WhatsApp (con código de país)
 </label>
 <div class="flex items-center space-x-2">
-  <span class="bg-gray-100 text-gray-700 px-3 py-3 rounded-lg font-semibold whitespace-nowrap">
-    +54
-  </span>
+  <select 
+    id="country-code" 
+    class="bg-gray-100 text-gray-700 px-3 py-3 rounded-lg font-semibold border-none focus:ring-2 focus:ring-purple-600 w-24"
+    aria-label="Código de país">
+    <option data-country="AR" value="+54" selected>🇦🇷 +54</option>
+    <option data-country="UY" value="+598">🇺🇾 +598</option>
+    <option data-country="CL" value="+56">🇨🇱 +56</option>
+    <option data-country="PE" value="+51">🇵🇪 +51</option>
+    <option data-country="MX" value="+52">🇲🇽 +52</option>
+    <option data-country="ES" value="+34">🇪🇸 +34</option>
+    <option data-country="US" value="+1">🇺🇸 +1</option>
+    <option data-country="BR" value="+55">🇧🇷 +55</option>
+    <option data-country="BO" value="+591">🇧🇴 +591</option>
+    <option data-country="PY" value="+595">🇵🇾 +595</option>
+    <option data-country="EC" value="+593">🇪🇨 +593</option>
+    <option data-country="VE" value="+58">🇻🇪 +58</option>
+    <option data-country="CO" value="+57">🇨🇴 +57</option>
+    <option data-country="CR" value="+506">🇨🇷 +506</option>
+    <option data-country="PA" value="+507">🇵🇦 +507</option>
+  </select>
   <input 
     type="tel" 
-    id="whatsapp"
+    id="phone" 
     name="whatsapp" 
     placeholder="9 11 1234-5678" 
-    pattern="[0-9\s\-]+"
-    minlength="8"
-    maxlength="20"
-    required
+    pattern="[0-9\s\-]+" 
+    minlength="8" 
+    maxlength="20" 
+    required 
     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
     title="Ingresa solo números, por ejemplo: 9 11 1234-5678">
 </div>
 <p class="text-xs text-gray-500 mt-1">
   Ejemplo: 9 11 1234-5678 (nueve, once, doce treinta y cuatro, cincuenta y seis setenta y ocho)
 </p>
+
 <input type="hidden" name="_autoresponse" value="Gracias por tu inscripción, [Nombre]. En breve recibirás el enlace a tu clase gratuita. Con amor, León Meotto">
 
       <button 
@@ -291,6 +310,7 @@
   </script>
 </body>
 </html>
+
 
 
 

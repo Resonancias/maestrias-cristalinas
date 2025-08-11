@@ -285,8 +285,53 @@
       </div>
     `;
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const whatsappInput = document.getElementById('whatsapp');
+
+    whatsappInput.addEventListener('focus', function () {
+      if (!this.value) {
+        this.placeholder = '+54 9 11 1234-5678';
+      }
+    });
+
+    whatsappInput.addEventListener('input', function () {
+      let value = this.value.replace(/[^+\d]/g, '');
+
+      if (!value.startsWith('+') && value !== '') {
+        value = '+' + value;
+      }
+
+      if (value.length > 3) {
+        const countryCode = value.slice(0, 3);
+        const rest = value.slice(3).replace(/\s+/g, '');
+        if (rest.length > 0) {
+          const maxDigits = 15;
+          const truncated = rest.slice(0, maxDigits);
+          value = `${countryCode} ${truncated}`;
+        } else {
+          value = countryCode;
+        }
+      }
+
+      this.value = value;
+    });
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (e) {
+      const value = whatsappInput.value.trim();
+      if (value === '' || !value.startsWith('+') || value.length < 6) {
+        alert('Por favor, ingresa un número de WhatsApp válido con código de país. Ej: +54 9 11 1234-5678');
+        e.preventDefault();
+      }
+    });
+  });
+</script>
+  
 </body>
 </html>
+
 
 
 

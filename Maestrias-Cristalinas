@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maestrias Cristalina - Resonancias en salud y vida®</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .bg-header {
+      background-image: url('https://i.ibb.co/4wvtW7L8/Amatista.jpg');
+      background-size: cover;
+      opacity: 0.15;
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen relative bg-gradient-to-br from-purple-50 via-white to-pink-50">
+  <div class="bg-header"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 py-12">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-8">
+      <div class="flex items-center space-x-3">
+        <img src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" alt="Resonancias" class="w-12 h-12 object-contain">
+        <div>
+          <h1 class="text-xl font-bold text-cyan-500">Resonancias</h1>
+          <p class="text-sm text-cyan-500">en salud y vida®</p>
+        </div>
+      </div>
+      <a href="index.html" class="text-purple-600 hover:underline">← Volver al inicio</a>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center py-12 mb-12 bg-white/80 backdrop-blur-sm rounded-2xl">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Maestrías Cristalinas</h2>
+      <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto italic">
+        Profundiza en el reino minearl y domina símbolos y protocolos energéticos para guiar sesiones con ética, seguridad y efectividad.
+      </p>
+      <div class="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-800 text-sm font-medium mb-4">
+        🌟 Todo es vibración de amor
+      </div>
+    </section>
+
+    <!-- Módulos -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6">¿Qué aprenderás?</h3>
+      <ul class="space-y-4">
+        <li class="flex items-start space-x-3">
+          <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+          <span><strong>Clase 1:</strong> Profundizando sobre el reino mineral:	Las cuatro interacciones fundamentales de la naturaleza. Estructura y Hábito cristalino. Virtus y Toque energético.</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+          <span><strong>Clase 2:</strong> Introducción a las Familias Cristalinas y los Cuarzos Maestros.</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+          <span><strong>Clase 3:</strong> Las subfamilias del Cuarzo: Aventurinas, Jaspes y Ágatas/Calcedonias.	Los ojos de: Tigre, Buey, Halcón + el Ojo de Gato.</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+          <span><strong>Clase 4:</strong> Las Calcitas: Calcitas y Calcitas Ópticas. Las calcitas y el sistema nervioso.</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+          <span><strong>Clase 5:</strong> Las Obsidianas: El poder de la transformación profunda. La obsidiana y los chamanismos.</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+          <span><strong>Clase 6:</strong> Cuarzos Maestros (parte 1): ¿Qué enseña un cuarzo maestro?. Características de un cuarzo maestro.</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+          <span><strong>Clase 7:</strong> Cuarzos Maestros (parte 2): Las 27 Maestrías más reconocidas en la actualidad. Modos de utilizarlos en sesiones.</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+          <span><strong>Clase 8:</strong> Profundizando la práctica de Armonizar con Cristales®. Limpieza de espacios. Introducción a las técnicas chamánicas de sanación con cristales.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Beneficios -->
+<div class="mb-6">
+  <h5 class="text-lg font-bold text-gray-900 mb-4">✨ Beneficios Exclusivos</h5>
+  <ul class="space-y-3 text-sm text-gray-600">
+    <li class="flex items-start space-x-2">
+      <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+      <span><strong>Guía Esencial de Minerales</strong> + Meditaciones Activas (basadas en Zazen y Pases Mágicos)</span>
+    </li>
+    <li class="flex items-start space-x-2">
+      <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+      <span>Descubre cómo limpiar, programar y sintonizar 40+ cristales</span>
+    </li>
+    <li class="flex items-start space-x-2">
+      <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+      <span><strong>Comunidad Vibracional</strong><br>Conecta con la comunidad de estudiantes en un espacio seguro</span>
+    </li>
+    <li class="flex items-start space-x-2">
+      <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+      <span><strong>Kit de Herramientas Digitales</strong><br>Incluye: checklist de limpieza energética, tabla de cristales por chakra y audios de activación</span>
+    </li>
+    <li class="flex items-start space-x-2">
+      <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 flex-shrink-0"></span>
+      <span><strong>Certificado Digital de Sanación Cristalina</strong><br>Avalado por León Meotto y Resonancias en Salud y Vida®</span>
+    </li>
+  </ul>
+</div>
+
+    <!-- CTA -->
+    <section class="text-center py-12">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">Libera tu potencial energético</h3>
+      <p class="text-gray-600 mb-8"><em>Inscríbete hoy y sintoniza con la sabiduría ancestral de los cristales</em></p>
+      <a 
+        href="https://wa.me/5493416690731?text=Hola%20León,%20quiero%20inscribirme%20en%20la%20Iniciación%20Cristalina" 
+        target="_blank"
+        class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg inline-block">
+        Inscribirse por WhatsApp
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t border-gray-200 text-center text-gray-600 text-sm">
+      &copy; 2024 Resonancias en salud y vida®. Todo es vibración de amor.
+    </footer>
+  </div>
+</body>
+</html>

@@ -181,6 +181,13 @@
     Una vez inscripto, recibirás por correo todas las instrucciones de pago y acceso inmediato al programa.
   </p>
 </section>
+
+    <!-- Botón de cronograma -->
+<button 
+  onclick="openModal()" 
+  class="mt-4 text-purple-600 hover:text-purple-800 font-medium text-sm underline">
+  🔍 Ver cronograma de clases
+</button>
     
     <!-- CTA -->
     <section class="text-center py-12">
@@ -199,5 +206,43 @@
       &copy; 2024 Resonancias en salud y vida®. Todo es vibración de amor.
     </footer>
   </div>
+
+<!-- Modal de Cronograma -->
+<div id="cronogramaModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-2xl p-6 max-w-lg w-full mx-4 max-h-96 overflow-y-auto">
+    <div class="flex justify-between items-start mb-4">
+      <h3 class="text-xl font-bold text-gray-900">📅 Cronograma - Iniciación Cristalina</h3>
+      <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+    </div>
+    <div class="text-sm text-gray-600 space-y-2">
+      <p><strong>Clase 1:</strong> Miércoles 10 de abril - 19:00</p>
+      <p><strong>Clase 2:</strong> Miércoles 17 de abril - 19:00</p>
+      <p><strong>Clase 3:</strong> Miércoles 24 de abril - 19:00</p>
+      <p><strong>Clase 4:</strong> Miércoles 1 de mayo - 19:00</p>
+      <p><strong>Clase 5:</strong> Miércoles 8 de mayo - 19:00</p>
+      <p><strong>Clase 6:</strong> Miércoles 15 de mayo - 19:00</p>
+      <p><strong>Clase 7:</strong> Miércoles 22 de mayo - 19:00</p>
+      <p><strong>Clase 8:</strong> Miércoles 29 de mayo - 19:00</p>
+    </div>
+    <div class="mt-6 text-center">
+      <button 
+        onclick="closeModal()" 
+        class="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold text-sm">
+        Entendido
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Script para abrir/cerrar el modal -->
+<script>
+  function openModal() {
+    document.getElementById('cronogramaModal').classList.remove('hidden');
+  }
+  function closeModal() {
+    document.getElementById('cronogramaModal').classList.add('hidden');
+  }
+</script>
+  
 </body>
 </html>

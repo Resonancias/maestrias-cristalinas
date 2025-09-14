@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maestrías Cristalinas - Resonancias en salud y vida®</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif; 
+    }
+    .bg-overlay {
+      background-image: url('https://i.ibb.co/4wvtW7L8/Amatista.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen relative bg-gradient-to-br from-teal-50 via-white to-pink-50">
+  <div class="bg-overlay"></div>
+  <div class="relative z-10">
+    <div id="app"></div>
+  </div>
+
+  <script>
+    document.getElementById('app').innerHTML = `
+      <div class="max-w-6xl mx-auto px-4 py-12">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-16">
+          <div class="flex items-center space-x-3">
+            <!-- Isologo -->
+            <img 
+  src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" 
+  alt="Isologo Resonancias en salud y vida®" 
+  class="w-14 h-14 object-contain">
+            <div>
+              <h1 class="text-2xl font-bold text-cyan-500">Resonancias</h1>
+              <p class="text-sm text-cyan-500 font-medium">en salud y vida®</p>
+            </div>
+          </div>
+          <nav class="hidden md:flex space-x-6">
+            <a href="#inicio" class="text-gray-700 hover:text-cyan-500 font-medium">Inicio</a>
+            <a href="#sobre-leon" class="text-gray-700 hover:text-cyan-500 font-medium">Sobre León</a>
+            <a href="#formacion" class="text-gray-700 hover:text-cyan-500 font-medium">Formación</a>
+            <a href="#contacto" class="text-gray-700 hover:text-cyan-500 font-medium">Contacto</a>
+          </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="inicio" class="text-center py-16">
+          <div class="inline-flex items-center px-4 py-2 bg-teal-100 rounded-full text-cyan-600 text-sm font-medium mb-8">
+            🌟 Todo es vibración de amor
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Maestrías
+            <span class="block bg-gradient-to-r from-teal-400 to-cyan-600 bg-clip-text text-transparent">
+              Cristalinas
+            </span>
+          </h2>
+          <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Un camino de transformación a través del lenguaje sagrado de los Cristales. 
+            Formación completa para convertirte en un maestro sanador energético.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})"
+              class="bg-gradient-to-r from-teal-400 to-cyan-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg">
+              Clase Gratuita
+            </button>
+            <button onclick="document.getElementById('formacion').scrollIntoView({behavior: 'smooth'})"
+              class="border-2 border-cyan-500 text-cyan-500 px-8 py-4 rounded-full font-semibold hover:bg-cyan-500 hover:text-white">
+              Ver Programas
+            </button>
+          </div>
+        </section>
+
+        <!-- Video de Bienvenida -->
+<section class="my-20">
+  <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Bienvenida</h3>
+  <div class="flex justify-center">
+    <div class="w-full md:w-2/3 lg:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-2xl">
+      <iframe 
+        src="https://www.youtube.com/embed/oox3oEBQAfE?si=H7rrbKAclIFtItUg" 
+        title="Video de bienvenida - León Meotto"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        class="w-full h-full">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+        <!-- Sobre León Meotto -->
+        <section id="sobre-leon" class="my-20">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-3xl font-bold text-gray-900 mb-4">León Meotto</h3>
+              <p class="text-lg text-gray-600 mb-4 text-justify">
+                Terapeuta energético, formador y guía espiritual con  más de 20 años de experiencia 
+                en sanación con cristales, lenguaje corporal y técnicas ancestrales.
+              </p>
+              <p class="text-lg text-gray-600 mb-6 text-justify">
+                Fundador de <strong>Resonancias en salud y vida®</strong>, acompaña a personas de todo el mundo 
+                en su proceso de transformación interior a través del poder sanador del movimiento consciente y vibración mineral.
+              </p>
+              <p class="text-lg text-gray-600 mb-6 text-justify italic">
+                La danza y los cristales me revelaron su lenguaje ancestral: Así nació la práctica de <strong>Armonizar con Cristales®</strong>
+                el arte sagrado de transformar vibración en sanación.
+              </p>
+            <div class="flex space-x-4">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-cyan-500">15+</div>
+                  <div class="text-sm text-gray-500">Años de experiencia</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-teal-500">1000+</div>
+                  <div class="text-sm text-gray-500">Alumnos transformados</div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <img 
+                src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg" 
+                alt="León Meotto - Terapeuta Energético" 
+                class="rounded-2xl shadow-xl w-80 object-cover">
+            </div>
+          </div>
+        </section>
+
+     <!-- Formación -->
+<section id="formacion" class="py-16">
+  <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Nuestros Programas</h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+   
+        <!-- Iniciación Cristalina -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col h-full">
+      <div class="flex-grow">
+        <h4 class="text-xl font-bold text-gray-900 mb-3">Iniciación Cristalina</h4>
+        <p class="text-gray-600 mb-4">Descubre los fundamentos para la sanación con cristales y conoce técnicas de armonización.</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>8 clases teórico/prácticas</span>
+          </li>
+           <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>La energía, los cristales y el cuerpo</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Guía de minerales + meditaciones guiadas</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Más de 40 cristales y sus aplicaciones</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Certificado de participación</span>
+          </li>
+        </ul>
+      </div>
+      <a 
+       href="iniciacion-cristalina.html" 
+       class="mt-auto block bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-teal-600 transition-colors duration-200 text-center">
+       Ver programa
+      </a>
+    </div>
+
+    <!-- Maestrías Cristalinas -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col h-full">
+      <div class="flex-grow">
+        <h4 class="text-xl font-bold text-gray-900 mb-3">Maestrías Cristalinas</h4>
+        <p class="text-gray-600 mb-4">Domina símbolos y protocolos energéticos para guiar sesiones con ética, seguridad y efectividad.</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>8 clases de profundización</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Cuidado y Protección energética</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Cuarzos Maestros y Familias cristalinas</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Protocolos profesionales</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Certificación en Armonizador/a con Cristales</span>
+          </li>
+        </ul>
+      </div>
+      <a 
+       href="Maestrias-Cristalinas.html" 
+       class="mt-auto block bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-teal-600 transition-colors duration-200 text-center">
+       Ver programa
+      </a>
+    </div>
+
+    <!-- Curso completo -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col h-full">
+      <div class="flex-grow">
+        <h4 class="text-xl font-bold text-gray-900 mb-3">Curso completo</h4>
+        <p class="text-gray-600 mb-4">Contrata al curso completo y accede al MAYOR DESCUENTO y otros beneficios.</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Optimizar recursos</span>
+          </li>
+           <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Formación continua</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Acceso a comunidad de terapeutas</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Descuentos para otros cursos y Retiros</span>
+          </li>
+          <li class="flex items-center space-x-2 text-sm text-gray-600">
+            <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+            <span>Sesión personal con León Meotto</span>
+          </li>
+        </ul>
+      </div>
+      <a 
+       href="curso-completo.html" 
+       class="mt-auto block bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-teal-600 transition-colors duration-200 text-center">
+       Inscribirse
+      </a>
+    </div>
+  </div>
+</section>
+
+      <!-- Contacto -->
+<section id="contacto" class="py-16">
+  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Accede a tu Clase Gratuita</h3>
+    <p class="text-gray-600 text-center mb-6">Completa el formulario y recibirás el enlace a la clase por correo.</p>
+
+    <!-- Formulario conectado a Formspree -->
+    <form action="https://formspree.io/f/xanbaawp" method="POST" class="space-y-4">
+      <input 
+        type="text" 
+        name="nombre" 
+        placeholder="Nombre completo" 
+        required 
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent">
+
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Correo electrónico" 
+        required 
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+
+<!-- Campo WhatsApp con código internacional abierto -->
+<label for="whatsapp" class="block text-sm font-medium text-gray-700">
+  WhatsApp (código internacional incluido)
+</label>
+<input 
+  type="tel" 
+  id="whatsapp"
+  name="whatsapp" 
+  placeholder="+54 9 11 1234-5678" 
+  pattern="^\+[0-9]{1,4}[\s\-]?[0-9\s\-]{6,}$"
+  title="Ingresa tu número completo con código de país. Ej: +54 9 11 1234-5678"
+  required 
+  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+  autocomplete="tel">
+<p class="text-xs text-gray-500 mt-1">
+  Ejemplo: <code>+54 9 11 1234-5678</code> (incluye el <strong>+</strong> y el código de país)
+</p>
+
+<input type="hidden" name="_next" value="https://maestriascristalinas.netlify.app/#gracias">
+
+      <button 
+        type="submit"
+        class="w-full bg-gradient-to-r from-teal-400 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200">
+        Acceder a Clase Gratuita
+      </button>
+    </form>
+
+    <p class="text-xs text-gray-500 text-center mt-4">
+      Tu información está segura. Nunca compartiremos tus datos.
+    </p>
+  </div>
+</section>
+
+<section id="gracias" class="py-20 text-center max-w-4xl mx-auto px-6">
+  <div class="bg-white rounded-2xl shadow-lg p-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">¡Gracias por tu inscripción! 🙏</h2>
+    <p class="text-lg text-gray-600 mb-4">
+      En breve recibirás el enlace a tu clase gratuita en tu correo.
+    </p>
+    <p class="text-gray-500">
+      Si no lo ves en las próximas horas, por favor revisa tu carpeta de spam.
+    </p>
+    <p class="mt-6 text-cyan-600 font-medium">
+      Con amor, <br>León Meotto<br><em>Resonancias en salud y vida®</em>
+    </p>
+  </div>
+</section>
+
+        <!-- Footer -->
+<footer class="mt-16 pt-8 border-t border-gray-200 text-center text-gray-600">
+  <div class="flex justify-center space-x-8 mb-4">
+    <a href="https://leonmeotto.wixsite.com/resonancias" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="text-gray-500 hover:text-cyan-500 font-medium">
+      Terapias
+    </a>
+    <a href="https://www.resonanciasensaludyvida.com.ar" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="text-gray-500 hover:text-cyan-500 font-medium">
+      Tienda
+    </a>
+    <a href="https://resonanciassaludyvida.blogspot.com" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="text-gray-500 hover:text-cyan-500 font-medium">
+      Blog
+    </a>
+    <a href="https://leonmeotto.wixsite.com/resonancias" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="text-gray-500 hover:text-cyan-500 font-medium">
+      Políticas
+    </a>
+  </div>
+  <p class="text-sm">&copy; 2024 Resonancias en salud y vida®. Todo es vibración de amor.</p>
+</footer>
+      </div>
+    `;
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const whatsappInput = document.getElementById('whatsapp');
+
+    whatsappInput.addEventListener('focus', function () {
+      if (!this.value) {
+        this.placeholder = '+54 9 11 1234-5678';
+      }
+    });
+
+    whatsappInput.addEventListener('input', function () {
+      let value = this.value.replace(/[^+\d]/g, '');
+
+      if (!value.startsWith('+') && value !== '') {
+        value = '+' + value;
+      }
+
+      if (value.length > 3) {
+        const countryCode = value.slice(0, 3);
+        const rest = value.slice(3).replace(/\s+/g, '');
+        if (rest.length > 0) {
+          const maxDigits = 15;
+          const truncated = rest.slice(0, maxDigits);
+          value = `${countryCode} ${truncated}`;
+        } else {
+          value = countryCode;
+        }
+      }
+
+      this.value = value;
+    });
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (e) {
+      const value = whatsappInput.value.trim();
+      if (value === '' || !value.startsWith('+') || value.length < 6) {
+        alert('Por favor, ingresa un número de WhatsApp válido con código de país. Ej: +54 9 11 1234-5678');
+        e.preventDefault();
+      }
+    });
+  });
+</script>
+
+<!-- Botón flotante de WhatsApp con imagen oficial -->
+<a 
+  href="https://wa.me/5493416690731" 
+  target="_blank" 
+  class="fixed bottom-6 right-6 w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 flex items-center justify-center"
+  style="border: 3px solid white; background-color: #25D366;"
+  aria-label="Contactar por WhatsApp">
+  <img 
+    src="https://i.ibb.co/jZgcFttr/Adobe-Stock-907501599-Preview-Editorial-Use-Only.png" 
+    alt="WhatsApp" 
+    class="w-8 h-8 object-contain">
+</a>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -412,37 +412,29 @@
   
 <div class="flex justify-center space-x-6 mb-12">
   <!-- Instagram -->
-  <!-- Instagram con gradiente real -->
+  <!-- Instagram - Versión visible -->
 <a 
   href="https://www.instagram.com/resonanciasensaludyvida" 
   target="_blank" 
   aria-label="Seguir en Instagram"
   class="group hover:scale-110 transition-transform duration-200 block">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="mx-auto">
+    <defs>
+      <linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f09433"/>
+        <stop offset="40%" stop-color="#e6683c"/>
+        <stop offset="60%" stop-color="#dc2743"/>
+        <stop offset="100%" stop-color="#cc2366"/>
+      </linearGradient>
+    </defs>
+    <!-- Fondo cuadrado con gradiente -->
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#instagram-gradient)" />
+    <!-- Círculo blanco interior -->
+    <circle cx="12" cy="12" r="6" fill="white" />
+    <!-- Círculo pequeño (lente) -->
+    <circle cx="16" cy="8" r="1.1" fill="#f09433" />
   </svg>
-  <defs>
-    <linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f09433"/>
-      <stop offset="40%" stop-color="#e6683c"/>
-      <stop offset="60%" stop-color="#dc2743"/>
-      <stop offset="100%" stop-color="#cc2366"/>
-    </linearGradient>
-  </defs>
 </a>
- 
-  <!-- YouTube -->
-  <a 
-    href="https://www.youtube.com/@resonanciassaludyvida6900" 
-    target="_blank" 
-    aria-label="Ver canal en YouTube"
-    class="text-red-600 hover:text-red-700 transition-colors duration-200">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24" class="hover:scale-110 transition-transform duration-200">
-      <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16v-8l7.5 4L9 16z"/>
-    </svg>
-  </a>
 
   <!-- Facebook -->
   <a 
@@ -548,6 +540,7 @@
   
 </body>
 </html>
+
 
 
 

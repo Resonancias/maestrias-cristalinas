@@ -3,188 +3,600 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Formación en sanación con cristales. Maestrías Cristalinas®: programa modular con certificación. Talleres de chamanismo, masculinidad sagrada y memoria terrestre."/>
-  <meta name="keywords" content="formación con cristales, sanación con minerales, talleres de autoconocimiento, Armonizar con Cristales®, Maestrías Cristalinas®"/>
+  <meta name="description" content="Maestrías Cristalinas® – Formación en sanación energética con cristales. Aprende el arte sagrado de Armonizar con Cristales®."/>
+  <meta name="keywords" content="sanación con cristales, formación con minerales, Armonizar con Cristales®, Maestrías Cristalinas®, chamanismo, autoconocimiento, terapia energética"/>
   <title>Maestrías Cristalinas® – Formación en Sanación con Cristales</title>
-  <!-- CSS, Favicon, Open Graph -->
+
+  <!-- Google Fonts: Lato & Merriweather -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==================== RESET Y BASE ==================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #333;
+      line-height: 1.7;
+      background-color: #f9f9fb;
+      background-image: url('https://images.unsplash.com/photo-1583385770016-2be8b1d72a32?q=80&w=2000');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.92);
+      z-index: -1;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', serif;
+      color: #0d3b2a;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* ==================== HEADER ==================== */
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 0.8rem 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Merriweather', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0d3b2a;
+    }
+
+    .logo span {
+      color: #1a5d4a;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0d3b2a;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1a5d4a;
+    }
+
+    /* ==================== HERO ==================== */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,248,245,0.95));
+      border-radius: 16px;
+      margin: 2rem auto;
+      max-width: 1100px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      color: #0d3b2a;
+      margin-bottom: 1rem;
+    }
+
+    .hero .subtitle {
+      font-size: 1.3rem;
+      color: #1a5d4a;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      letter-spacing: 0.8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-primary {
+      background: #0d3b2a;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #0a2e20;
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #0d3b2a;
+      border: 2px solid #0d3b2a;
+    }
+
+    .btn-secondary:hover {
+      background: #f0f8f5;
+      transform: translateY(-3px);
+    }
+
+    /* ==================== SECCIÓN: QUIÉNES SOMOS ==================== */
+    .section {
+      padding: 4rem 0;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 16px;
+      margin: 2rem auto;
+      max-width: 1100px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      text-align: center;
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #1a5d4a;
+      margin: 0.8rem auto;
+    }
+
+    .intro-text {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* ==================== BIENVENIDA LEÓN MEOTTO ==================== */
+    .bienvenida {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .bienvenida-img {
+      flex: 1;
+      min-width: 280px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .bienvenida-img img {
+      object-fit: cover;
+    }
+
+    .bienvenida-text {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .bienvenida-text p {
+      font-style: italic;
+      color: #1a5d4a;
+      margin: 1.2rem 0;
+    }
+
+    /* ==================== PROGRAMAS ==================== */
+    .programas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .programa-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid #1a5d4a;
+    }
+
+    .programa-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .programa-card h3 {
+      color: #0d3b2a;
+    }
+
+    .programa-card p {
+      color: #555;
+    }
+
+    .programa-card .btn-small {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.4rem;
+      background: #0d3b2a;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .programa-card .btn-small:hover {
+      background: #0a2e20;
+    }
+
+    /* ==================== CLASE GRATUITA ==================== */
+    .clase-gratuita {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #e8f5e8, #d0f0d0);
+      border-radius: 16px;
+      margin: 3rem auto;
+      max-width: 900px;
+    }
+
+    .clase-gratuita h2 {
+      color: #0d3b2a;
+    }
+
+    .clase-form {
+      max-width: 500px;
+      margin: 1.5rem auto;
+    }
+
+    .clase-form input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .clase-form button {
+      background: #0d3b2a;
+      color: white;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .clase-form button:hover {
+      background: #0a2e20;
+    }
+
+    .aviso {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 4rem;
+      color: #0d3b2a;
+      font-size: 0.95rem;
+    }
+
+    footer .logo {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    .social-links {
+      margin: 1.5rem 0;
+    }
+
+    .social-links a {
+      margin: 0 1rem;
+      font-size: 1.4rem;
+      color: #0d3b2a;
+      text-decoration: none;
+    }
+
+    /* ==================== WHATSAPP FLOTANTE ==================== */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.3rem; }
+      h2 { font-size: 1.8rem; }
+
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .hero, .section {
+        padding: 3rem 1.5rem;
+        margin: 1.5rem auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- HEADER -->
-  <header class="header">
-    <div class="logo">Maestrías Cristalinas®</div>
-    <nav class="menu">
-      <a href="#inicio">Inicio</a>
-      <a href="#programa">Programa Principal</a>
-      <a href="#talleres">Talleres Complementarios</a>
-      <a href="#certificacion">Certificación</a>
-      <a href="#recursos">Recursos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <header>
+    <div class="container header-content">
+      <div class="logo">Maestrías <span>Cristalinas®</span></div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#programas">Programas</a></li>
+          <li><a href="#talleres">Talleres</a></li>
+          <li><a href="#certificacion">Certificación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
+  <!-- HERO -->
+  <section id="inicio" class="container">
+    <div class="hero">
       <h1>Maestrías Cristalinas®</h1>
-      <p class="subtitle">Formación en sanación y autoconocimiento a través del lenguaje sagrado de los cristales.</p>
+      <p class="subtitle">Un camino de transformación a través del lenguaje sagrado de los Cristales. Formación completa para convertirte en un maestro sanador energético.</p>
       <div class="cta-buttons">
-        <a href="#programa" class="btn-primary">Conoce el Programa Principal</a>
-        <a href="#talleres" class="btn-secondary">Explora Talleres Complementarios</a>
+        <a href="#programas" class="btn btn-primary">Conoce el Programa Principal</a>
+        <a href="#talleres" class="btn btn-secondary">Explora Talleres Complementarios</a>
       </div>
     </div>
-    <div class="hero-image">
-      <!-- Imagen simbólica: cristales, manos, energía, naturaleza -->
+  </section>
+
+  <!-- ¿QUÉ ES? -->
+  <section class="section">
+    <div class="container">
+      <h2>¿Qué es Maestrías Cristalinas®?</h2>
+      <p class="intro-text">
+        Un sendero de sanación y autoconocimiento que integra ciencia vibracional, sabiduría ancestral y disciplina consciente. 
+        A través del método <strong>Armonizar con Cristales®</strong>, aprendes a escuchar, dialogar y co-crear con tus aliados cristalinos.
+      </p>
+
+      <!-- Bienvenida de León Meotto -->
+      <div class="bienvenida">
+        <div class="bienvenida-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format" alt="León Meotto - Terapeuta Energético">
+        </div>
+        <div class="bienvenida-text">
+          <h3>Bienvenida de León Meotto</h3>
+          <p>
+            Terapeuta energético, formador y guía espiritual con más de 20 años de experiencia en sanación con cristales, 
+            lenguaje corporal y técnicas ancestrales.
+          </p>
+          <p>
+            Fundador de <strong>Resonancias en salud y vida®</strong>, acompaño a personas de todo el mundo 
+            en su proceso de transformación interior a través del poder sanador del movimiento consciente y la vibración mineral.
+          </p>
+          <p>
+            “La danza y los cristales me revelaron su lenguaje ancestral: así nació la práctica de <strong>Armonizar con Cristales®</strong>, 
+            el arte sagrado de transformar vibración en sanación.”
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ¿QUÉ ES MAESTRÍAS CRISTALINAS? -->
-  <section class="seccion-quienes">
-    <h2>¿Qué es Maestrías Cristalinas®?</h2>
-    <p>Un camino de transformación profunda que integra <strong>ciencia vibracional, sabiduría ancestral y disciplina consciente</strong>. A través del método <em>Armonizar con Cristales®</em>, aprendes a escuchar, dialogar y co-crear con tus aliados cristalinos.</p>
-    <p>Un programa modular, progresivo y ético, diseñado para formar maestros sanadores que actúen con reciprocidad (<em>ayni</em>) y responsabilidad energética.</p>
-  </section>
+  <!-- PROGRAMAS -->
+  <section id="programas" class="section">
+    <div class="container">
+      <h2>Nuestros Programas</h2>
+      <div class="programas-grid">
+        
+        <!-- Iniciación Cristalina -->
+        <div class="programa-card">
+          <h3>Iniciación Cristalina</h3>
+          <p>Descubre los fundamentos para la sanación con cristales. Aprende a elegir tus aliados minerales, limpiarlos, cargarlos y aplicar protocolos básicos de armonización energética.</p>
+          <a href="#" class="btn-small">Saber más</a>
+        </div>
 
-  <!-- PROGRAMA PRINCIPAL -->
-  <section id="programa" class="seccion-programa">
-    <h2>Programa Principal de Formación</h2>
-    <p>Un trayecto estructurado en 5 módulos que desarrollan conocimiento técnico, sensibilidad energética y liderazgo ceremonial.</p>
+        <!-- Maestrías Cristalinas -->
+        <div class="programa-card">
+          <h3>Maestrías Cristalinas</h3>
+          <p>Domina símbolos, geometrías sagradas y protocolos avanzados para diseñar y guiar sesiones con ética, seguridad y efectividad. Trayecto modular de M0 a M4.</p>
+          <a href="#" class="btn-small">Saber más</a>
+        </div>
 
-    <div class="modulo-grid">
-      <!-- MÓDULO 0 -->
-      <article class="modulo-card">
-        <h3>Módulo 0: El Despertar Cristalino</h3>
-        <p>Reconexión con la matriz mineral. Limpieza energética básica, elección de aliados cristalinos y primeros protocolos de armonización.</p>
-        <a href="/modulo-0" class="btn-small">Saber más</a>
-      </article>
+        <!-- Curso Completo -->
+        <div class="programa-card">
+          <h3>Curso Completo</h3>
+          <p>Contrata toda la formación y accede al mayor descuento, acompañamiento prioritario, recursos exclusivos y certificación opcional.</p>
+          <a href="#" class="btn-small">Inscríbete ahora</a>
+        </div>
 
-      <!-- MÓDULO 1 -->
-      <article class="modulo-card">
-        <h3>Módulo 1: Geometría Sagrada y Matrices Energéticas</h3>
-        <p>Uso de formas geométricas con cristales, creación de redes de sanación y comprensión de campos morfogenéticos.</p>
-        <a href="/modulo-1" class="btn-small">Saber más</a>
-      </article>
-
-      <!-- MÓDULO 2 -->
-      <article class="modulo-card">
-        <h3>Módulo 2: Chakras, Cuerpos Sutiles y Cristales</h3>
-        <p>Diagnóstico energético, alineación de cuerpos sutiles y protocolos avanzados para desbloquear memorias celulares.</p>
-        <a href="/modulo-2" class="btn-small">Saber más</a>
-      </article>
-
-      <!-- MÓDULO 3 -->
-      <article class="modulo-card">
-        <h3>Módulo 3: Ceremonias de Sanación Colectiva</h3>
-        <p>Diseño y conducción de círculos ceremoniales con cristales. Ética del espacio sagrado y contención energética.</p>
-        <a href="/modulo-3" class="btn-small">Saber más</a>
-      </article>
-
-      <!-- MÓDULO 4 -->
-      <article class="modulo-card">
-        <h3>Módulo 4: Maestría y Transmisión</h3>
-        <p>Integración del proceso, diseño de tu propuesta de sanación y acompañamiento en la entrega del proyecto final.</p>
-        <a href="/modulo-4" class="btn-small">Saber más</a>
-      </article>
-    </div>
-
-    <!-- Diagrama de progresión (visual opcional en SVG o imagen) -->
-    <div class="flujo-modulos">
-      <img src="flujo-m0-a-m4.svg" alt="Trayecto formativo: Módulo 0 a Módulo 4" />
+      </div>
     </div>
   </section>
 
   <!-- TALLERES COMPLEMENTARIOS -->
-  <section id="talleres" class="seccion-talleres">
-    <h2>Talleres Especializados (Independientes)</h2>
-    <p>Experiencias profundas que puedes tomar sin necesidad de completar el programa principal. Ideales para explorar temas específicos con intensidad.</p>
-
-    <div class="talleres-grid">
-      <!-- TARJETA 1 -->
-      <div class="taller-card">
-        <img src="circulo-varones.jpg" alt="Círculo de Varones – Masculinidad Sagrada" />
-        <h3>Círculo de Varones – Masculinidad Sagrada y Cristales Arquetípicos</h3>
-        <p>Un espacio ceremonial para reconectar con la masculinidad desde la vulnerabilidad, el honor y la reciprocidad con la Tierra.</p>
-        <a href="/taller-varones" class="btn-small">Saber más</a>
-      </div>
-
-      <!-- TARJETA 2 -->
-      <div class="taller-card">
-        <img src="obsidiana.jpg" alt="Chamanismo y Obsidiana" />
-        <h3>Chamanismo y Cristales: El Camino de la Obsidiana</h3>
-        <p>Viaje chamánico guiado con obsidiana para liberar sombra, sanar heridas ancestrales y fortalecer el cuerpo de poder.</p>
-        <a href="/taller-obsidiana" class="btn-small">Saber más</a>
-      </div>
-
-      <!-- TARJETA 3 -->
-      <div class="taller-card">
-        <img src="memoria-tierra.jpg" alt="Memorias de la Tierra" />
-        <h3>Memorias de la Tierra (experiencia vivencial)</h3>
-        <p>Conexión directa con las memorias cristalinas del planeta. Lectura de registros akáshicos minerales y canalización de sabiduría telúrica.</p>
-        <a href="/taller-memoria-tierra" class="btn-small">Saber más</a>
+  <section id="talleres" class="section">
+    <div class="container">
+      <h2>Talleres Especializados</h2>
+      <p class="intro-text">
+        Experiencias profundas que puedes tomar de forma independiente. Ideales para explorar temas específicos con intensidad ceremonial.
+      </p>
+      <div class="programas-grid">
+        <div class="programa-card">
+          <h3>Círculo de Varones – Masculinidad Sagrada</h3>
+          <p>Un espacio ceremonial para reconectar con la masculinidad desde la vulnerabilidad, el honor y la reciprocidad con la Tierra. Guiado con cristales arquetípicos.</p>
+          <a href="#" class="btn-small">Más información</a>
+        </div>
+        <div class="programa-card">
+          <h3>Chamanismo y Obsidiana</h3>
+          <p>Viaje chamánico guiado con obsidiana para liberar sombra, sanar heridas ancestrales y fortalecer el cuerpo de poder. Ceremonia de fuego incluida.</p>
+          <a href="#" class="btn-small">Más información</a>
+        </div>
+        <div class="programa-card">
+          <h3>Memorias de la Tierra</h3>
+          <p>Experiencia vivencial de conexión con las memorias cristalinas del planeta. Lectura de registros akáshicos minerales y canalización de sabiduría telúrica.</p>
+          <a href="#" class="btn-small">Más información</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CERTIFICACIÓN -->
-  <section id="certificacion" class="seccion-certificacion">
-    <h2>Certificación Oficial</h2>
-    <p>Al completar los módulos M0 a M4 y presentar un proyecto final de integración, podrás optar por la <strong>Certificación como Maestro Sanador Energético con Cristales</strong>.</p>
-    <ul>
-      <li>Acceso a red de egresados</li>
-      <li>Herramientas para comenzar tu práctica profesional</li>
-      <li>Uso ético del sello <em>Armonizar con Cristales®</em></li>
-    </ul>
-    <p><em>La certificación es opcional y requiere compromiso con la disciplina consciente y el ayni con la enseñanza.</em></p>
+  <section id="certificacion" class="section">
+    <div class="container">
+      <h2>Certificación Oficial</h2>
+      <p class="intro-text">
+        Al completar el trayecto de Maestrías Cristalinas® (M0 a M4) y presentar un proyecto final de integración, podrás optar por la certificación como <strong>Maestro Sanador Energético con Cristales</strong>.
+      </p>
+      <ul style="max-width: 700px; margin: 1.5rem auto 1.5rem; text-align: left; padding-left: 1.5rem;">
+        <li>Acceso a red de egresados internacionales</li>
+        <li>Herramientas para comenzar tu práctica profesional</li>
+        <li>Uso ético del sello <strong>Armonizar con Cristales®</strong></li>
+        <li>Acompañamiento post-formación</li>
+      </ul>
+      <p style="text-align: center; font-style: italic; color: #1a5d4a;">
+        La certificación es opcional y requiere compromiso con la disciplina consciente y el ayni (reciprocidad) con la enseñanza.
+      </p>
+    </div>
   </section>
 
-  <!-- TESTIMONIOS -->
-  <section class="seccion-testimonios">
-    <h2>Lo que dicen quienes han caminado este sendero</h2>
-    <blockquote>
-      “Los cristales me devolvieron mi voz. Esta formación no solo me enseñó técnicas, me devolvió mi propósito.”<br>
-      <strong>— Carla M., Argentina</strong>
-    </blockquote>
-    <blockquote>
-      “El Círculo de Varones cambió mi relación conmigo mismo. Nunca imaginé que una piedra negra (obsidiana) pudiera mostrarme tanto amor.”<br>
-      <strong>— Diego R., México</strong>
-    </blockquote>
-  </section>
-
-  <!-- RECURSOS Y CLASE GRATUITA -->
-  <section class="seccion-recursos">
-    <h2>Empieza tu camino hoy</h2>
-    <p>Regístrate para acceder a tu <strong>clase gratuita</strong>: <em>"Primer Contacto con tus Aliados Cristalinos"</em>.</p>
-    <form action="#" method="POST">
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu correo" required />
-      <button type="submit" class="btn-primary">Obtener clase gratuita</button>
-    </form>
-    <p class="aviso">Tu información está segura. Nunca compartiremos tus datos.</p>
+  <!-- CLASE GRATUITA -->
+  <section class="clase-gratuita">
+    <h2>Accede a tu Clase Gratuita</h2>
+    <p>Descubre cómo los cristales pueden transformar tu energía y tu propósito.</p>
+    <div class="clase-form">
+      <form action="#" method="POST">
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo electrónico" required />
+        <button type="submit">Obtener clase gratuita</button>
+      </form>
+      <p class="aviso">Tu información está segura. Nunca compartiremos tus datos.</p>
+    </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">Maestrías Cristalinas®</div>
-      <div class="footer-links">
-        <a href="#programa">Programa</a>
-        <a href="#talleres">Talleres</a>
-        <a href="#certificacion">Certificación</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#contacto">Contacto</a>
+  <footer id="contacto">
+    <div class="container">
+      <div class="logo">Maestrías <span>Cristalinas®</span></div>
+      <p>Formación en sanación energética con cristales</p>
+      <p>© 2025 Resonancias en salud y vida®. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <!-- Puedes agregar íconos reales de redes sociales aquí -->
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Email</a>
       </div>
-      <div class="footer-social">
-        <!-- Iconos: Instagram, YouTube, etc. -->
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Resonancias en salud y vida®. Todos los derechos reservados. | <a href="/privacidad">Política de privacidad</a></p>
+      <p><a href="#" style="color: #1a5d4a;">Política de privacidad</a></p>
     </div>
   </footer>
 
-  <!-- BOTÓN WHATSAPP FLOTANTE -->
-  <a href="https://wa.me/tunumerodewhatsapp" class="whatsapp-btn" target="_blank">
-    💬 ¿Preguntas? Escríbenos
+  <!-- BOTÓN WHATSAPP -->
+  <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp-btn">
+    💬 Escríbenos
   </a>
 
 </body>

@@ -1,163 +1,113 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Maestrías Cristalinas® – Formación en sanación energética con cristales. Aprende el arte sagrado de Armonizar con Cristales®."/>
-  <meta name="keywords" content="sanación con cristales, formación con minerales, Armonizar con Cristales®, Maestrías Cristalinas®, chamanismo, autoconocimiento, terapia energética"/>
   <title>Maestrías Cristalinas® – Formación en Sanación con Cristales</title>
 
   <!-- Google Fonts: Lato & Merriweather -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-  /* ==================== BASE DEL SITIO ==================== */
-  body {
-    font-family: 'Lato', sans-serif;
-    color: #333;
-    line-height: 1.7;
-    margin: 0;
-    padding: 0;
+    /* ==================== BASE DEL SITIO ==================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    /* FONDO CON IMAGEN ATENUADA (efecto cristalino suave) */
-    background-image: url('https://images.unsplash.com/photo-1583385770016-2be8b1d72a32');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #333;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
 
-    /* Capa blanca semitransparente para mejorar legibilidad */
-    position: relative;
-  }
+      /* FONDO CON IMAGEN MINERAL SUAVE Y PROFUNDA */
+      background-image: url('https://images.unsplash.com/photo-1583385770016-2be8b1d72a32');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
 
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 255, 255, 0.94);
-    z-index: -1;
-  }
+      /* Capa blanca semitransparente para legibilidad */
+      position: relative;
+    }
 
-  /* ==================== TIPOGRAFÍA Y COLOR PRINCIPAL ==================== */
-  h1, h2, h3, h4 {
-    color: #0097a7; /* ←← cyan-700: tono turquesa profundo y armónico */
-    line-height: 1.3;
-  }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.94);
+      z-index: -1;
+    }
 
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2.2rem; text-align: center; margin: 2.5rem 0 1.5rem; }
-  h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+    /* ==================== TIPOGRAFÍA Y COLORES ==================== */
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', serif;
+      color: #0097a7; /* ←← cyan-700: tono turquesa profundo y armónico */
+      line-height: 1.3;
+    }
 
-  p {
-    margin-bottom: 1rem;
-    color: #333;
-  }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; text-align: center; margin: 2.5rem 0 1.5rem; }
+    h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
 
-  strong {
-    color: #0097a7; /* mismo color para palabras clave */
-  }
+    p {
+      margin-bottom: 1rem;
+      color: #333;
+    }
 
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+    strong {
+      color: #0097a7;
+    }
 
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
 
-  /* ==================== SECCIONES ==================== */
-  .section {
-    padding: 4rem 0;
-    max-width: 1100px;
-    margin: 2rem auto;
-  }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
 
-  .section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #0097a7;
-    margin: 0.8rem auto;
-  }
-
-  /* ==================== PROGRAMAS Y TALLERES ==================== */
-  .programas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .programa-card {
-    background: white;
-    padding: 1.8rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    border-left: 4px solid #0097a7;
-  }
-
-  .programa-card h3 {
-    color: #0097a7;
-  }
-
-  .btn-small {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.6rem 1.4rem;
-    background: #0097a7;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-</style>
-
-    /* ==================== HEADER FIJO CON TRANSPARENCIA ==================== */
+    /* ==================== HEADER FIJO ==================== */
     header {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
       padding: 0.8rem 0;
-      transition: all 0.3s ease;
     }
 
     .header-content {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 10px;
-    }
-
-    .logo-container img {
-      width: 50px;
-      height: auto;
+      gap: 12px;
     }
 
     .logo-text {
       font-family: 'Merriweather', serif;
       font-size: 1.1rem;
-      color: #0097a7;
+      color: #00bcd4; /* ←← cyan-500: Resonancias en salud y vida */
       line-height: 1.3;
     }
 
     .logo-text strong {
-      color: #00897b;
+      color: #00bcd4;
     }
 
     nav ul {
@@ -168,99 +118,39 @@
 
     nav a {
       text-decoration: none;
-      color: #0097a7;
+      color: #00bcd4; /* Menú en cyan-500 */
       font-weight: 600;
       font-size: 1rem;
-      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #00897b;
+      color: #0097a7;
     }
 
-    /* Espacio bajo el header fijo */
     main {
-      margin-top: 100px;
+      margin-top: 100px; /* Espacio bajo el header fijo */
     }
 
     /* ==================== HERO ==================== */
     .hero {
       text-align: center;
-      padding: 5rem 2rem;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 16px;
-      margin: 2rem auto;
+      padding: 4rem 2rem;
       max-width: 1100px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      color: #0097a7;
-      margin-bottom: 1rem;
+      margin: 2rem auto;
     }
 
     .hero .subtitle {
       font-size: 1.3rem;
-      color: #00897b;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      letter-spacing: 0.8px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-primary {
-      background: #00897b;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #0097a7;
-      transform: translateY(-3px);
-    }
-
-    .btn-secondary {
-      background: transparent;
       color: #0097a7;
-      border: 2px solid #00897b;
+      max-width: 700px;
+      margin: 0.8rem auto 2rem;
     }
 
-    .btn-secondary:hover {
-      background: #e0f7fa;
-      transform: translateY(-3px);
-    }
-
-    /* ==================== SECCIÓN GENERAL ==================== */
+    /* ==================== SECCIONES ==================== */
     .section {
       padding: 4rem 0;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 16px;
-      margin: 2rem auto;
       max-width: 1100px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .section h2 {
-      text-align: center;
-      position: relative;
-      margin-bottom: 2.5rem;
+      margin: 2rem auto;
     }
 
     .section h2::after {
@@ -268,19 +158,11 @@
       display: block;
       width: 80px;
       height: 3px;
-      background: #00897b;
+      background: #0097a7;
       margin: 0.8rem auto;
     }
 
-    .intro-text {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    /* ==================== BIENVENIDA LEÓN MEOTTO ==================== */
+    /* Bienvenida */
     .bienvenida {
       display: flex;
       flex-wrap: wrap;
@@ -292,10 +174,11 @@
     .bienvenida-img {
       flex: 1;
       min-width: 280px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-      border: 2px solid #00897b;
+    }
+
+    .bienvenida-img img {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border: 3px solid #0097a7;
     }
 
     .bienvenida-text {
@@ -303,22 +186,7 @@
       min-width: 300px;
     }
 
-    .bienvenida-text h3 {
-      color: #0097a7;
-      font-size: 1.8rem;
-    }
-
-    .bienvenida-text p {
-      color: #444;
-      margin: 1rem 0;
-      font-size: 1.05rem;
-    }
-
-    .bienvenida-text strong {
-      color: #00897b;
-    }
-
-    /* ==================== PROGRAMAS Y TALLERES ==================== */
+    /* Programas y Talleres */
     .programas-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -328,16 +196,10 @@
 
     .programa-card {
       background: white;
-      padding: 2rem;
+      padding: 1.8rem;
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-top: 4px solid #00897b;
-    }
-
-    .programa-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      border-left: 4px solid #0097a7;
     }
 
     .programa-card h3 {
@@ -348,11 +210,11 @@
       color: #555;
     }
 
-    .programa-card .btn-small {
+    .btn-small {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.6rem 1.4rem;
-      background: #00897b;
+      background: #0097a7;
       color: white;
       text-decoration: none;
       border-radius: 30px;
@@ -360,29 +222,13 @@
       font-weight: 600;
     }
 
-    .programa-card .btn-small:hover {
-      background: #0097a7;
-    }
-
-    /* ==================== CLASE GRATUITA ==================== */
-    .clase-gratuita {
-      text-align: center;
-      padding: 3.5rem 2rem;
-      background: rgba(255, 255, 255, 0.96);
-      border-radius: 16px;
-      margin: 3rem auto;
-      max-width: 900px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .clase-gratuita h2 {
-      color: #0097a7;
-      margin-bottom: 1rem;
-    }
-
+    /* Clase Gratuita */
     .clase-form {
       max-width: 500px;
-      margin: 1.5rem auto;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 12px;
     }
 
     .clase-form input {
@@ -391,75 +237,37 @@
       margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 8px;
-      font-size: 1rem;
+      font-family: 'Lato', sans-serif;
     }
 
     .clase-form button {
-      background: #00897b;
-      color: white;
-      padding: 0.9rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      width: 100%;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .clase-form button:hover {
       background: #0097a7;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
     }
 
     .aviso {
       font-size: 0.9rem;
-      color: #777;
+      color: #757575;
       margin-top: 1rem;
       font-style: italic;
     }
 
-    /* ==================== FOOTER ==================== */
+    /* Footer */
     footer {
       text-align: center;
       padding: 3rem 1rem;
-      margin-top: 4rem;
-      color: #0097a7;
+      color: #757575;
       font-size: 0.95rem;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      max-width: 1100px;
-      margin: 4rem auto;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      margin-top: 4rem;
     }
 
-    footer .logo {
-      font-family: 'Merriweather', serif;
-      font-size: 1.4rem;
-      color: #0097a7;
-    }
-
-    footer .logo strong {
-      color: #00897b;
-    }
-
-    .social-links {
-      margin: 1.5rem 0;
-    }
-
-    .social-links a {
-      margin: 0 1rem;
-      color: #00897b;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .social-links a:hover {
-      color: #0097a7;
-    }
-
-    /* ==================== WHATSAPP FLOTANTE ==================== */
+    /* WhatsApp flotante */
     .whatsapp-btn {
       position: fixed;
       bottom: 25px;
@@ -470,44 +278,22 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
       z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      animation: float 3s ease-in-out infinite;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0px); }
-    }
-
-    /* ==================== RESPONSIVE ==================== */
+    /* Responsive */
     @media (max-width: 768px) {
-      h1 { font-size: 2.3rem; }
-      h2 { font-size: 1.8rem; }
-
-      .hero, .section, .clase-gratuita, footer {
-        padding: 3rem 1.5rem;
-        margin: 1.5rem auto;
+      .bienvenida {
+        flex-direction: column;
+        text-align: center;
       }
-
       .cta-buttons {
         flex-direction: column;
         align-items: center;
       }
-
-      .btn {
+      .btn, .btn-small {
         width: 100%;
         max-width: 300px;
-      }
-
-      nav ul {
-        gap: 1rem;
-        font-size: 0.95rem;
       }
     }
   </style>
@@ -518,25 +304,23 @@
   <header>
     <div class="container header-content">
       <div class="logo-container">
-        <img src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" alt="Logo Maestrías Cristalinas®" />
-      <div class="logo-text" style="line-height: 1.1;">
-         <div style="font-size: 1.3rem; color: #00acc1;">Resonancias</div>
-         <div style="font-size: 1rem; color: #00acc1;">en salud y vida®</div>
+        <img src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" alt="Logo Maestrías Cristalinas®" width="50" />
+        <div class="logo-text">
+          Resonancias<br><strong>en salud y vida®</strong>
+        </div>
       </div>
-      </div>
-     <nav>
-      <ul style="display: flex; list-style: none; gap: 2rem;">
-        <li><a href="#inicio" style="color: #00acc1; text-decoration: none; font-weight: 600; font-size: 1rem;">Inicio</a></li>
-        <li><a href="#programas" style="color: #00acc1; text-decoration: none; font-weight: 600; font-size: 1rem;">Programas</a></li>
-        <li><a href="#talleres" style="color: #00acc1; text-decoration: none; font-weight: 600; font-size: 1rem;">Talleres</a></li>
-        <li><a href="#certificacion" style="color: #00acc1; text-decoration: none; font-weight: 600; font-size: 1rem;">Certificación</a></li>
-        <li><a href="#contacto" style="color: #00acc1; text-decoration: none; font-weight: 600; font-size: 1rem;">Contacto</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#programas">Programas</a></li>
+          <li><a href="#talleres">Talleres</a></li>
+          <li><a href="#certificacion">Certificación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
   <main>
 
     <!-- HERO -->
@@ -544,10 +328,6 @@
       <div class="hero">
         <h1>Maestrías Cristalinas®</h1>
         <p class="subtitle">Un camino de transformación a través del lenguaje sagrado de los Cristales. Formación completa para convertirte en un maestro sanador energético.</p>
-        <div class="cta-buttons">
-          <a href="#programas" class="btn btn-primary">Conoce el Programa Principal</a>
-          <a href="#talleres" class="btn btn-secondary">Explora Talleres Complementarios</a>
-        </div>
       </div>
     </section>
 
@@ -555,7 +335,7 @@
     <section class="section">
       <div class="container">
         <h2>¿Qué es Maestrías Cristalinas®?</h2>
-        <p class="intro-text">
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
           Un sendero de sanación y autoconocimiento que integra ciencia vibracional, sabiduría ancestral y disciplina consciente. 
           A través del método <strong>Armonizar con Cristales®</strong>, aprendes a escuchar, dialogar y co-crear con tus aliados cristalinos.
         </p>
@@ -590,21 +370,18 @@
         <h2>Nuestros Programas</h2>
         <div class="programas-grid">
           
-          <!-- Iniciación Cristalina -->
           <div class="programa-card">
             <h3>Iniciación Cristalina</h3>
             <p>Descubre los fundamentos para la sanación con cristales. Aprende a elegir tus aliados minerales, limpiarlos, cargarlos y aplicar protocolos básicos de armonización energética.</p>
             <a href="#" class="btn-small">Saber más</a>
           </div>
 
-          <!-- Maestrías Cristalinas -->
           <div class="programa-card">
             <h3>Maestrías Cristalinas</h3>
             <p>Domina símbolos, geometrías sagradas y protocolos avanzados para diseñar y guiar sesiones con ética, seguridad y efectividad. Trayecto modular de M0 a M4.</p>
             <a href="#" class="btn-small">Saber más</a>
           </div>
 
-          <!-- Curso Completo -->
           <div class="programa-card">
             <h3>Curso Completo</h3>
             <p>Contrata toda la formación y accede al mayor descuento, acompañamiento prioritario, recursos exclusivos y certificación opcional.</p>
@@ -615,11 +392,11 @@
       </div>
     </section>
 
-    <!-- TALLERES COMPLEMENTARIOS -->
+    <!-- TALLERES -->
     <section id="talleres" class="section">
       <div class="container">
         <h2>Talleres Especializados</h2>
-        <p class="intro-text">
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: #757575;">
           Experiencias profundas que puedes tomar de forma independiente. Ideales para explorar temas específicos con intensidad ceremonial.
         </p>
         <div class="programas-grid">
@@ -646,27 +423,27 @@
     <section id="certificacion" class="section">
       <div class="container">
         <h2>Certificación Oficial</h2>
-        <p class="intro-text">
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
           Al completar el trayecto de Maestrías Cristalinas® (M0 a M4) y presentar un proyecto final de integración, podrás optar por la certificación como <strong>Maestro Sanador Energético con Cristales</strong>.
         </p>
-        <ul style="max-width: 700px; margin: 1.5rem auto 1.5rem; text-align: left; padding-left: 1.5rem;">
+        <ul style="max-width: 700px; margin: 1.5rem auto; text-align: left; padding-left: 1.5rem;">
           <li>Acceso a red de egresados internacionales</li>
           <li>Herramientas para comenzar tu práctica profesional</li>
           <li>Uso ético del sello <strong>Armonizar con Cristales®</strong></li>
           <li>Acompañamiento post-formación</li>
         </ul>
-        <p style="text-align: center; font-style: italic; color: #00897b;">
+        <p style="text-align: center; font-style: italic; color: #0097a7;">
           La certificación es opcional y requiere compromiso con la disciplina consciente y el ayni (reciprocidad) con la enseñanza.
         </p>
       </div>
     </section>
 
     <!-- CLASE GRATUITA -->
-    <section class="clase-gratuita">
-      <h2>Accede a tu Clase Gratuita</h2>
-      <p>Descubre cómo los cristales pueden transformar tu energía y tu propósito.</p>
-      <div class="clase-form">
-        <form action="#" method="POST">
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Accede a tu Clase Gratuita</h2>
+        <p style="text-align: center;">Descubre cómo los cristales pueden transformar tu energía y tu propósito.</p>
+        <form class="clase-form" action="#" method="POST">
           <input type="text" placeholder="Tu nombre" required />
           <input type="email" placeholder="Tu correo electrónico" required />
           <button type="submit">Obtener clase gratuita</button>
@@ -676,26 +453,19 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contacto">
+    <footer>
       <div class="container">
-        <div class="logo">Maestrías <strong>Cristalinas®</strong></div>
-        <p>Formación en sanación energética con cristales</p>
-        <p>© 2025 Resonancias en salud y vida®. Todos los derechos reservados.</p>
-        <div class="social-links">
-          <a href="#">Instagram</a>
-          <a href="#">YouTube</a>
-          <a href="#">Email</a>
-        </div>
-        <p><a href="#" style="color: #00897b;">Política de privacidad</a></p>
+        <p>&copy; 2025 Resonancias en salud y vida®. Todos los derechos reservados.</p>
+        <p>Formación en sanación energética con cristales • Armonizar con Cristales®</p>
       </div>
     </footer>
 
-  </main>
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp-btn">
+      💬 Escríbenos
+    </a>
 
-  <!-- BOTÓN WHATSAPP -->
-  <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp-btn">
-    💬 Escríbenos
-  </a>
+  </main>
 
 </body>
 </html>

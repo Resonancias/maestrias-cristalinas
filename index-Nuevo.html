@@ -20,27 +20,16 @@
 
     body {
       font-family: 'Lato', sans-serif;
-      color: #333;
+      color: #fff;
       line-height: 1.7;
-      background-color: #f9f9fb;
-      background-image: url('https://images.unsplash.com/photo-1583385770016-2be8b1d72a32?q=80&w=2000');
-      background-size: cover;
+      background: linear-gradient(to right, #00a99d, #007b8a); /* from-teal-400 to-cyan-600 */
       background-attachment: fixed;
-      background-position: center;
       position: relative;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 255, 255, 0.92);
-      z-index: -1;
     }
 
     h1, h2, h3, h4 {
       font-family: 'Merriweather', serif;
-      color: #0d3b2a;
+      color: white;
       font-weight: 700;
       line-height: 1.3;
     }
@@ -51,7 +40,11 @@
 
     p {
       margin-bottom: 1rem;
-      color: #444;
+      color: #e0f7fa;
+    }
+
+    .text-dark {
+      color: #0d3b2a;
     }
 
     img {
@@ -69,70 +62,63 @@
 
     /* ==================== HEADER ==================== */
     header {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
       padding: 0.8rem 0;
     }
 
-    .header-content {
+    .logo-container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
-      font-family: 'Merriweather', serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #0d3b2a;
-    }
-
-    .logo span {
-      color: #1a5d4a;
+    .logo-container img {
+      width: 60px;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
     }
 
     nav ul {
       display: flex;
       list-style: none;
       gap: 2rem;
+      margin-left: auto;
     }
 
     nav a {
       text-decoration: none;
-      color: #0d3b2a;
+      color: white;
       font-weight: 600;
       font-size: 1rem;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #1a5d4a;
+      color: #e0f7fa;
     }
 
     /* ==================== HERO ==================== */
     .hero {
       text-align: center;
       padding: 5rem 2rem;
-      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,248,245,0.95));
+      background: rgba(13, 27, 30, 0.85);
       border-radius: 16px;
       margin: 2rem auto;
       max-width: 1100px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     .hero h1 {
       font-size: 2.8rem;
-      color: #0d3b2a;
+      color: white;
       margin-bottom: 1rem;
     }
 
     .hero .subtitle {
       font-size: 1.3rem;
-      color: #1a5d4a;
+      color: #a7e9de;
       max-width: 700px;
       margin: 0 auto 2rem;
     }
@@ -153,7 +139,7 @@
       font-size: 0.95rem;
       letter-spacing: 0.8px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .btn-primary {
@@ -168,29 +154,30 @@
 
     .btn-secondary {
       background: transparent;
-      color: #0d3b2a;
-      border: 2px solid #0d3b2a;
+      color: white;
+      border: 2px solid white;
     }
 
     .btn-secondary:hover {
-      background: #f0f8f5;
+      background: rgba(255,255,255,0.1);
       transform: translateY(-3px);
     }
 
     /* ==================== SECCIÓN: QUIÉNES SOMOS ==================== */
     .section {
       padding: 4rem 0;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(13, 27, 30, 0.88);
       border-radius: 16px;
       margin: 2rem auto;
       max-width: 1100px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     }
 
     .section h2 {
       text-align: center;
       position: relative;
       margin-bottom: 2.5rem;
+      color: #a7e9de;
     }
 
     .section h2::after {
@@ -198,7 +185,7 @@
       display: block;
       width: 80px;
       height: 3px;
-      background: #1a5d4a;
+      background: #00cfc0;
       margin: 0.8rem auto;
     }
 
@@ -207,7 +194,7 @@
       margin: 0 auto;
       text-align: center;
       font-size: 1.1rem;
-      color: #444;
+      color: #b2dfdb;
     }
 
     /* ==================== BIENVENIDA LEÓN MEOTTO ==================== */
@@ -224,11 +211,8 @@
       min-width: 280px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .bienvenida-img img {
-      object-fit: cover;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      border: 3px solid #00cfc0;
     }
 
     .bienvenida-text {
@@ -236,10 +220,19 @@
       min-width: 300px;
     }
 
+    .bienvenida-text h3 {
+      color: #00cfc0;
+      font-size: 1.8rem;
+    }
+
     .bienvenida-text p {
-      font-style: italic;
-      color: #1a5d4a;
-      margin: 1.2rem 0;
+      color: #e0f7fa;
+      margin: 1rem 0;
+      font-size: 1.05rem;
+    }
+
+    .bienvenida-text strong {
+      color: #a7e9de;
     }
 
     /* ==================== PROGRAMAS ==================== */
@@ -251,17 +244,17 @@
     }
 
     .programa-card {
-      background: white;
+      background: rgba(255, 255, 255, 0.98);
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-top: 4px solid #1a5d4a;
+      border-top: 4px solid #00a99d;
     }
 
     .programa-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
 
     .programa-card h3 {
@@ -270,13 +263,14 @@
 
     .programa-card p {
       color: #555;
+      font-size: 1rem;
     }
 
     .programa-card .btn-small {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.6rem 1.4rem;
-      background: #0d3b2a;
+      background: #00a99d;
       color: white;
       text-decoration: none;
       border-radius: 30px;
@@ -285,21 +279,23 @@
     }
 
     .programa-card .btn-small:hover {
-      background: #0a2e20;
+      background: #007b8a;
     }
 
     /* ==================== CLASE GRATUITA ==================== */
     .clase-gratuita {
       text-align: center;
-      padding: 3rem 2rem;
-      background: linear-gradient(135deg, #e8f5e8, #d0f0d0);
+      padding: 3.5rem 2rem;
+      background: rgba(13, 27, 30, 0.92);
       border-radius: 16px;
       margin: 3rem auto;
       max-width: 900px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
 
     .clase-gratuita h2 {
-      color: #0d3b2a;
+      color: #a7e9de;
+      margin-bottom: 1rem;
     }
 
     .clase-form {
@@ -311,13 +307,15 @@
       width: 100%;
       padding: 0.8rem;
       margin-bottom: 1rem;
-      border: 1px solid #ccc;
+      border: 1px solid #00cfc0;
       border-radius: 8px;
       font-size: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
     }
 
     .clase-form button {
-      background: #0d3b2a;
+      background: #00a99d;
       color: white;
       padding: 0.9rem 2rem;
       border: none;
@@ -332,12 +330,12 @@
     }
 
     .clase-form button:hover {
-      background: #0a2e20;
+      background: #007b8a;
     }
 
     .aviso {
       font-size: 0.9rem;
-      color: #666;
+      color: #a7e9de;
       margin-top: 1rem;
       font-style: italic;
     }
@@ -347,11 +345,12 @@
       text-align: center;
       padding: 3rem 1rem;
       margin-top: 4rem;
-      color: #0d3b2a;
+      color: #a7e9de;
       font-size: 0.95rem;
     }
 
     footer .logo {
+      font-family: 'Merriweather', serif;
       font-size: 1.6rem;
       margin-bottom: 1rem;
     }
@@ -360,15 +359,15 @@
       margin: 0.5rem 0;
     }
 
-    .social-links {
-      margin: 1.5rem 0;
-    }
-
     .social-links a {
       margin: 0 1rem;
-      font-size: 1.4rem;
-      color: #0d3b2a;
+      color: #a7e9de;
       text-decoration: none;
+      font-weight: 600;
+    }
+
+    .social-links a:hover {
+      color: white;
     }
 
     /* ==================== WHATSAPP FLOTANTE ==================== */
@@ -402,9 +401,9 @@
       h1 { font-size: 2.3rem; }
       h2 { font-size: 1.8rem; }
 
-      nav ul {
-        gap: 1rem;
-        font-size: 0.9rem;
+      .hero, .section, .clase-gratuita {
+        padding: 3rem 1.5rem;
+        margin: 1.5rem auto;
       }
 
       .cta-buttons {
@@ -417,9 +416,9 @@
         max-width: 300px;
       }
 
-      .hero, .section {
-        padding: 3rem 1.5rem;
-        margin: 1.5rem auto;
+      nav ul {
+        gap: 1rem;
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -427,10 +426,12 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="container header-content">
-      <div class="logo">Maestrías <span>Cristalinas®</span></div>
-      <nav>
+  <header class="container">
+    <div class="header-content" style="display: flex; align-items: center;">
+      <div class="logo-container">
+        <img src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" alt="Logo Maestrías Cristalinas®" />
+      </div>
+      <nav style="margin-left: auto;">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#programas">Programas</a></li>
@@ -466,7 +467,7 @@
       <!-- Bienvenida de León Meotto -->
       <div class="bienvenida">
         <div class="bienvenida-img">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format" alt="León Meotto - Terapeuta Energético">
+          <img src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg" alt="León Meotto - Terapeuta Energético">
         </div>
         <div class="bienvenida-text">
           <h3>Bienvenida de León Meotto</h3>
@@ -552,13 +553,13 @@
       <p class="intro-text">
         Al completar el trayecto de Maestrías Cristalinas® (M0 a M4) y presentar un proyecto final de integración, podrás optar por la certificación como <strong>Maestro Sanador Energético con Cristales</strong>.
       </p>
-      <ul style="max-width: 700px; margin: 1.5rem auto 1.5rem; text-align: left; padding-left: 1.5rem;">
+      <ul style="max-width: 700px; margin: 1.5rem auto 1.5rem; text-align: left; padding-left: 1.5rem; color: #555;">
         <li>Acceso a red de egresados internacionales</li>
         <li>Herramientas para comenzar tu práctica profesional</li>
         <li>Uso ético del sello <strong>Armonizar con Cristales®</strong></li>
         <li>Acompañamiento post-formación</li>
       </ul>
-      <p style="text-align: center; font-style: italic; color: #1a5d4a;">
+      <p style="text-align: center; font-style: italic; color: #00cfc0;">
         La certificación es opcional y requiere compromiso con la disciplina consciente y el ayni (reciprocidad) con la enseñanza.
       </p>
     </div>
@@ -581,16 +582,15 @@
   <!-- FOOTER -->
   <footer id="contacto">
     <div class="container">
-      <div class="logo">Maestrías <span>Cristalinas®</span></div>
+      <div class="logo">Maestrías <strong>Cristalinas®</strong></div>
       <p>Formación en sanación energética con cristales</p>
       <p>© 2025 Resonancias en salud y vida®. Todos los derechos reservados.</p>
       <div class="social-links">
-        <!-- Puedes agregar íconos reales de redes sociales aquí -->
         <a href="#">Instagram</a>
         <a href="#">YouTube</a>
         <a href="#">Email</a>
       </div>
-      <p><a href="#" style="color: #1a5d4a;">Política de privacidad</a></p>
+      <p><a href="#" style="color: #a7e9de;">Política de privacidad</a></p>
     </div>
   </footer>
 

@@ -1,1 +1,432 @@
-ddd
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestrías Cristalinas® - Formación en Sanación con Cristales</title>
+    <meta name="description" content="Formación modular en sanación y autoconocimiento a través de cristales. Combina ciencia, espiritualidad y prácticas ancestrales. Programa principal y talleres especializados.">
+    <style>
+        :root {
+            --color-primary: #4A90E2;
+            --color-secondary: #8B4513;
+            --color-accent: #FFD700;
+            --color-text: #333;
+            --color-light: #f8f9fa;
+            --color-dark: #2c3e50;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542736667-069246bdbc6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            color: var(--color-dark);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--color-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--color-light);
+        }
+
+        /* Program Cards */
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Workshops Section */
+        .workshops {
+            background-color: var(--color-light);
+        }
+
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .workshop-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .workshop-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .workshop-content {
+            padding: 1.5rem;
+        }
+
+        /* Certification Section */
+        .certification {
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-dark);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491112345678?text=Hola,%20me%20interesa%20saber%20más%20sobre%20Maestrías%20Cristalinas" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Maestrías Cristalinas®</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#programa">Programa Principal</a></li>
+                    <li><a href="#talleres">Talleres</a></li>
+                    <li><a href="#certificacion">Certificación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Maestrías Cristalinas®</h1>
+            <p>Formación en sanación y autoconocimiento a través de la sabiduría de los cristales</p>
+            <div class="cta-buttons">
+                <a href="#programa" class="btn btn-primary">Conoce el Programa Principal</a>
+                <a href="#talleres" class="btn btn-secondary">Explora Talleres Complementarios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">¿Qué es Maestrías Cristalinas®?</h2>
+            <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Un programa modular que combina ciencia (vibración, resonancia) y espiritualidad (chakras, rituales ancestrales) 
+                para formar en sanación y autoconocimiento a través de cristales. Dirigido tanto a principiantes como a terapeutas 
+                que buscan profundizar en el trabajo con aliados cristalinos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Programa Principal -->
+    <section id="programa">
+        <div class="container">
+            <h2 class="section-title">Programa Principal de Formación</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Un trayecto progresivo de 5 módulos que sientan las bases para una práctica consciente con cristales</p>
+            
+            <div class="program-grid">
+                <div class="program-card">
+                    <h3>Módulo 0: El Despertar Cristalino</h3>
+                    <p>Fundamentos de energía, vibración, limpieza y meditación con cristales. La base esencial para comenzar el camino.</p>
+                </div>
+                
+                <div class="program-card">
+                    <h3>Módulo 1: Descubre tu Esencia Cristalina</h3>
+                    <p>Sistema de chakras y armonización personal. Autoconocimiento a través de la conexión con aliados cristalinos.</p>
+                </div>
+                
+                <div class="program-card">
+                    <h3>Módulo 2: Escudo y Ritual</h3>
+                    <p>Técnicas de cuidado energético consciente y rituales cotidianos de protección y armonización.</p>
+                </div>
+                
+                <div class="program-card">
+                    <h3>Módulo 3: El Arte de la Terapia con Cristales</h3>
+                    <p>Protocolos profesionales y ética para terapeutas. Entrevista terapéutica y escucha activa.</p>
+                </div>
+                
+                <div class="program-card">
+                    <h3>Módulo 4: Sabiduría Ancestral</h3>
+                    <p>Cuarzos maestros, técnicas chamánicas y familias cristalinas. Profundización en la sabiduría ancestral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talleres Complementarios -->
+    <section class="workshops" id="talleres">
+        <div class="container">
+            <h2 class="section-title">Talleres Especializados</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Seminarios independientes que puedes tomar sin necesidad de cursar el programa completo</p>
+            
+            <div class="workshop-grid">
+                <div class="workshop-card">
+                    <div class="workshop-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="workshop-content">
+                        <h3>Círculo de Varones - Masculinidad Sagrada</h3>
+                        <p>Espacio de contención y crecimiento para hombres que exploran una masculinidad consciente a través de cristales arquetípicos y prácticas somáticas.</p>
+                        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Saber más</a>
+                    </div>
+                </div>
+                
+                <div class="workshop-card">
+                    <div class="workshop-image" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="workshop-content">
+                        <h3>Chamanismo y Cristales: El Camino de la Obsidiana</h3>
+                        <p>Proceso de transformación profunda mediante el uso ritualizado de obsidianas, integrando técnicas chamánicas y trabajo con la sombra.</p>
+                        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Saber más</a>
+                    </div>
+                </div>
+                
+                <div class="workshop-card">
+                    <div class="workshop-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="workshop-content">
+                        <h3>Memorias de la Tierra</h3>
+                        <p>Taller experiencial que integra danza popular, cristales y conexión con la naturaleza en una vivencia transformadora.</p>
+                        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Saber más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificación -->
+    <section class="certification" id="certificacion">
+        <div class="container">
+            <h2 class="section-title">Certificación</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                Al completar los 5 módulos del programa principal y presentar un proyecto final integrador, 
+                recibirás la certificación de <strong>Maestrías Cristalinas®</strong> que avala tu formación 
+                en sanación y autoconocimiento a través de cristales.
+            </p>
+            <a href="#contacto" class="btn btn-primary">Solicitar Información</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div>
+                <h3>Maestrías Cristalinas®</h3>
+                <p>Formación en sanación y autoconocimiento a través de la sabiduría de los cristales.</p>
+            </div>
+            
+            <div>
+                <h3>Contacto</h3>
+                <p>Email: info@maestriascristalinas.com</p>
+                <p>Teléfono: +54 9 11 1234-5678</p>
+            </div>
+            
+            <div>
+                <h3>Síguenos</h3>
+                <p>Instagram | Facebook | YouTube</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple mobile menu toggle (would need to be expanded)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add mobile menu functionality here if needed
+        });
+    </script>
+</body>
+</html>

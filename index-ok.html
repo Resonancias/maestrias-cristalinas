@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maestrías Cristalinas® - Resonancias en salud y vida</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     body { 
       font-family: 'Inter', sans-serif; 
+      scroll-behavior: smooth;
     }
     h1, h2, h3, h4, h5, h6 { 
       font-family: 'Playfair Display', serif; 
     }
-    .bg-overlay {
+    .bg-header {
       background-image: url('https://i.ibb.co/4wvtW7L8/Amatista.jpg');
       background-size: cover;
-      background-position: center;
       opacity: 0.15;
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
@@ -25,11 +25,11 @@
 </head>
 <body class="min-h-screen relative bg-gradient-to-br from-cyan-50 via-white to-teal-50">
 
-  <div class="bg-overlay"></div>
-  <div class="relative z-10">
+  <div class="bg-header"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
 
     <!-- Header -->
-    <header class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+    <header class="py-6 flex justify-between items-center border-b border-gray-200">
       <div class="flex items-center space-x-3">
         <img src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" alt="Resonancias" class="w-14 h-14 object-contain">
         <div>
@@ -40,25 +40,27 @@
       <nav class="hidden md:flex space-x-8 text-gray-700">
         <a href="#inicio" class="hover:text-cyan-600 font-medium">Inicio</a>
         <a href="#formacion" class="hover:text-cyan-600 font-medium">Formación</a>
-        <a href="#terapias" class="hover:text-cyan-600 font-medium">Terapias</a>
         <a href="#sobre-leon" class="hover:text-cyan-600 font-medium">Sobre León</a>
         <a href="#contacto" class="hover:text-cyan-600 font-medium">Contacto</a>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="max-w-6xl mx-auto px-4 py-20 text-center">
-      <div class="inline-flex items-center px-4 py-2 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium mb-6">
+    <section id="inicio" class="py-24 text-center">
+      <div class="inline-flex items-center px-6 py-3 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium mb-8 shadow-sm">
         🌟 Todo es vibración de amor
       </div>
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      <h2 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-8">
         Maestrías
         <span class="block bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
           Cristalinas®
         </span>
       </h2>
-      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto italic">
+      <p class="text-xl text-gray-600 italic mb-4 max-w-3xl mx-auto">
         Un camino de transformación a través del lenguaje sagrado de los cristales.
+      </p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+        Formación completa para convertirte en un maestro sanador energético, desde la ciencia vibracional, la geometría sagrada y la reciprocidad con tus aliados cristalinos.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <button 
@@ -75,9 +77,9 @@
     </section>
 
     <!-- Video de Bienvenida -->
-    <section class="max-w-4xl mx-auto my-20 px-4">
+    <section class="my-24 max-w-4xl mx-auto">
       <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Bienvenida</h3>
-      <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+      <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
         <iframe 
           src="https://www.youtube.com/embed/oox3oEBQAfE?si=H7rrbKAclIFtItUg" 
           title="Video de bienvenida - León Meotto"
@@ -89,68 +91,79 @@
       </div>
     </section>
 
-    <!-- Formación - Travesía Modular -->
-    <section id="formacion" class="max-w-6xl mx-auto py-20 px-4">
-      <h3 class="text-3xl font-bold text-center text-gray-900 mb-4">La Travesía Formativa</h3>
-      <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-        De los fundamentos a la maestría profesional, paso a paso.
+    <!-- ¿Qué es Maestrías Cristalinas®? -->
+    <section class="my-24 max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-gray-900 mb-8">¿Qué es Maestrías Cristalinas®?</h3>
+      <p class="text-lg text-gray-600 leading-relaxed mb-6">
+        Un sendero de sanación y autoconocimiento que integra ciencia vibracional, sabiduría ancestral y disciplina consciente.
       </p>
+      <p class="text-lg text-gray-600 leading-relaxed mb-6">
+        A través del método <strong>Armonizar con Cristales®</strong>, aprendes a escuchar, dialogar y co-crear con tus aliados cristalinos, activando tu percepción sutil y tu protagonismo personal.
+      </p>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Este camino no es solo sobre técnicas. Es una ceremonia de transformación continua, basada en la reciprocidad (<em>ayni</em>) y el diálogo vibracional.
+      </p>
+    </section>
+
+    <!-- Formación - Travesía Modular -->
+    <section id="formacion" class="my-24">
+      <h3 class="text-3xl font-bold text-center text-gray-900 mb-16">La Travesía Formativa</h3>
 
       <div class="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
         
         <!-- Módulo 0 -->
-        <div class="bg-white p-5 rounded-xl shadow-lg border-l-4 border-cyan-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2 text-sm">Módulo 0</h4>
-          <p class="text-xs text-gray-600">El Despertar Cristalino</p>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-cyan-500">
+          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 0</h4>
+          <p class="text-sm text-gray-600">El Despertar Cristalino</p>
         </div>
 
         <!-- Módulo 1 -->
-        <div class="bg-white p-5 rounded-xl shadow-lg border-l-4 border-blue-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2 text-sm">Módulo 1</h4>
-          <p class="text-xs text-gray-600">Descubre tu Esencia Cristalina</p>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-blue-500">
+          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 1</h4>
+          <p class="text-sm text-gray-600">Descubre tu Esencia Cristalina</p>
         </div>
 
         <!-- Módulo 2 -->
-        <div class="bg-white p-5 rounded-xl shadow-lg border-l-4 border-indigo-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2 text-sm">Módulo 2</h4>
-          <p class="text-xs text-gray-600">Escudo y Ritual – Protección Energética</p>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-indigo-500">
+          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 2</h4>
+          <p class="text-sm text-gray-600">Escudo y Ritual – Protección Energética</p>
         </div>
 
         <!-- Módulo 3 -->
-        <div class="bg-white p-5 rounded-xl shadow-lg border-l-4 border-teal-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2 text-sm">Módulo 3</h4>
-          <p class="text-xs text-gray-600">El Arte y la Ciencia de la Terapia</p>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-teal-500">
+          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 3</h4>
+          <p class="text-sm text-gray-600">El Arte y la Ciencia de la Terapia</p>
         </div>
 
         <!-- Módulo 4 -->
-        <div class="bg-white p-5 rounded-xl shadow-lg border-l-4 border-purple-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2 text-sm">Módulo 4</h4>
-          <p class="text-xs text-gray-600">Sabiduría Ancestral y Familias Cristalinas</p>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-purple-500">
+          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 4</h4>
+          <p class="text-sm text-gray-600">Sabiduría Ancestral y Familias Cristalinas</p>
         </div>
 
       </div>
 
-      <div class="text-center mt-12">
+      <div class="text-center mt-16">
         <a 
           href="certificacion.html" 
-          class="inline-block bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg text-sm">
+          class="inline-block bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg text-sm">
           Camino de Certificación Profesional
         </a>
       </div>
     </section>
 
     <!-- Sobre León Meotto -->
-    <section id="sobre-leon" class="max-w-6xl mx-auto my-20 px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section id="sobre-leon" class="my-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div>
-          <h3 class="text-3xl font-bold text-gray-900 mb-4">León Meotto</h3>
-          <p class="text-lg text-gray-600 mb-4">
+          <h3 class="text-3xl font-bold text-gray-900 mb-6">León Meotto</h3>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
             Terapeuta energético, formador y guía espiritual con más de 20 años de experiencia en sanación con cristales, lenguaje corporal y técnicas ancestrales.
           </p>
-          <p class="text-lg text-gray-600 mb-6">
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
             Fundador de <strong>Resonancias en salud y vida®</strong>, acompaña a personas de todo el mundo en su proceso de transformación interior a través del poder sanador del movimiento consciente y la vibración mineral.
           </p>
-          <div class="flex space-x-8">
+          <div class="flex space-x-12">
             <div class="text-center">
               <div class="text-2xl font-bold text-cyan-600">20+</div>
               <div class="text-sm text-gray-500">Años de experiencia</div>
@@ -165,63 +178,31 @@
           <img 
             src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg" 
             alt="León Meotto - Terapeuta Energético" 
-            class="rounded-2xl shadow-xl w-80 object-cover">
+            class="rounded-2xl shadow-xl w-80 object-cover border-4 border-white">
         </div>
-      </div>
-    </section>
-
-    <!-- Terapias -->
-    <section id="terapias" class="max-w-6xl mx-auto py-20 px-4">
-      <h3 class="text-3xl font-bold text-center text-gray-900 mb-4">Terapias Individuales</h3>
-      <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-        Espacios de escucha profunda, transformación y sanación energética.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        
-        <div class="bg-white p-5 rounded-xl shadow-lg border-t-4 border-purple-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2">Armonizar con Cristales®</h4>
-          <p class="text-xs text-gray-600">Protocolo único de sanación energética.</p>
-        </div>
-
-        <div class="bg-white p-5 rounded-xl shadow-lg border-t-4 border-blue-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2">Tarot de Autoconocimiento</h4>
-          <p class="text-xs text-gray-600">Diálogo simbólico para activar tu protagonismo.</p>
-        </div>
-
-        <div class="bg-white p-5 rounded-xl shadow-lg border-t-4 border-teal-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2">Terapia Floral</h4>
-          <p class="text-xs text-gray-600">Sanación emocional con esencias personalizadas.</p>
-        </div>
-
-        <div class="bg-white p-5 rounded-xl shadow-lg border-t-4 border-indigo-500 text-center">
-          <h4 class="font-bold text-gray-900 mb-2">Masaje Energético Profundo</h4>
-          <p class="text-xs text-gray-600">Integración somática y energía consciente.</p>
-        </div>
-
       </div>
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="max-w-4xl mx-auto py-20 px-4">
-      <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+    <section id="contacto" class="my-24">
+      <div class="bg-white rounded-2xl shadow-xl p-10 text-center max-w-3xl mx-auto">
         <h3 class="text-2xl font-bold text-gray-900 mb-6">Accede a tu Clase Gratuita</h3>
-        <p class="text-gray-600 mb-6">Completa el formulario y recibirás el enlace a la clase por correo.</p>
+        <p class="text-gray-600 mb-8">Completa el formulario y recibirás el enlace a la clase por correo.</p>
 
-        <form action="https://formspree.io/f/xanbaawp" method="POST" class="space-y-4 max-w-md mx-auto">
+        <form action="https://formspree.io/f/xanbaawp" method="POST" class="space-y-5">
           <input 
             type="text" 
             name="nombre" 
             placeholder="Nombre completo" 
             required 
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-base">
 
           <input 
             type="email" 
             name="email" 
             placeholder="Correo electrónico" 
             required 
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent">
+            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-base">
 
           <input 
             type="tel" 
@@ -230,34 +211,34 @@
             pattern="^\+[0-9]{1,4}[\s\-]?[0-9\s\-]{6,}$"
             title="Ingresa tu número completo con código de país. Ej: +54 9 11 1234-5678"
             required 
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent"
+            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-base"
             autocomplete="tel">
 
           <input type="hidden" name="_next" value="https://maestriascristalinas.netlify.app/#gracias">
 
           <button 
             type="submit"
-            class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200">
+            class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 text-base">
             Acceder a Clase Gratuita
           </button>
         </form>
 
-        <p class="text-xs text-gray-500 mt-4">
+        <p class="text-sm text-gray-500 mt-6">
           Tu información está segura. Nunca compartiremos tus datos.
         </p>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="max-w-6xl mx-auto mt-16 pt-8 px-4 border-t border-gray-200 text-center text-gray-600">
-      <div class="flex justify-center space-x-8 mb-4">
-        <a href="terapias.html" class="text-gray-500 hover:text-cyan-600">Terapias</a>
-        <a href="talleres.html" class="text-gray-500 hover:text-cyan-600">Talleres</a>
-        <a href="tienda.html" class="text-gray-500 hover:text-cyan-600">Tienda</a>
-        <a href="blog.html" class="text-gray-500 hover:text-cyan-600">Blog</a>
-        <a href="#" class="text-gray-500 hover:text-cyan-600">Políticas</a>
+    <footer class="mt-24 pt-10 border-t border-gray-200 text-center text-gray-600 pb-6">
+      <div class="flex justify-center space-x-10 mb-6">
+        <a href="terapias.html" class="text-gray-500 hover:text-cyan-600 font-medium">Terapias</a>
+        <a href="talleres.html" class="text-gray-500 hover:text-cyan-600 font-medium">Talleres</a>
+        <a href="tienda.html" class="text-gray-500 hover:text-cyan-600 font-medium">Tienda</a>
+        <a href="blog.html" class="text-gray-500 hover:text-cyan-600 font-medium">Blog</a>
+        <a href="#" class="text-gray-500 hover:text-cyan-600 font-medium">Políticas</a>
       </div>
-      <p>&copy; 2024 Resonancias en salud y vida®. Todo es vibración de amor.</p>
+      <p class="text-sm">&copy; 2024 Resonancias en salud y vida®. Todo es vibración de amor.</p>
     </footer>
 
   </div>

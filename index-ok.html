@@ -486,21 +486,57 @@
 <body>
 
   <!-- HEADER FLORANTE -->
-  <header>
-    <div class="container header-content">
-      <div class="logo">Maestrías <span>Cristalinas®</span></div>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#formacion">Formación</a></li>
-          <li><a href="#terapias">Terapias</a></li>
-          <li><a href="#talleres">Talleres</a></li>
-          <li><a href="#certificacion">Certificación</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+<!-- HEADER FLOTANTE - Versión optimizada -->
+<header class="bg-white/95 backdrop-blur-sm border-b border-gray-200">
+  <div class="container flex justify-between items-center py-3 md:py-4">
+    <!-- Logo: Isologo de Resonancias -->
+    <div class="flex items-center space-x-3">
+      <img 
+        src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" 
+        alt="Resonancias en salud y vida®" 
+        class="w-12 h-12 object-contain">
+      <div>
+        <h1 class="text-lg font-bold text-cyan-500">Resonancias</h1>
+        <p class="text-xs text-cyan-500 font-medium">en salud y vida®</p>
+      </div>
     </div>
-  </header>
+
+    <!-- Menú Desktop -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#inicio" class="text-gray-700 hover:text-cyan-600 font-medium">Inicio</a>
+      <a href="#sobre-leon" class="text-gray-700 hover:text-cyan-600 font-medium">Sobre León</a>
+      <a href="#formacion" class="text-gray-700 hover:text-cyan-600 font-medium">Formación</a>
+      <a href="#contacto" class="text-gray-700 hover:text-cyan-600 font-medium">Contacto</a>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <button 
+      class="md:hidden text-gray-700 focus:outline-none"
+      onclick="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menú móvil desplegable -->
+  <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm hidden">
+    <div class="container py-3 space-y-2">
+      <a href="#inicio" class="block text-gray-700 hover:text-cyan-600 font-medium py-2 border-t border-gray-100">Inicio</a>
+      <a href="#sobre-leon" class="block text-gray-700 hover:text-cyan-600 font-medium py-2 border-t border-gray-100">Sobre León</a>
+      <a href="#formacion" class="block text-gray-700 hover:text-cyan-600 font-medium py-2 border-t border-gray-100">Formación</a>
+      <a href="#contacto" class="block text-gray-700 hover:text-cyan-600 font-medium py-2 border-t border-gray-100">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<!-- Script para menú móvil -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+</script>
 
   <!-- HERO -->
   <section id="inicio" class="container">

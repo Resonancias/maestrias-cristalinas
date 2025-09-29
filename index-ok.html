@@ -189,7 +189,7 @@
       transform: translateY(-3px);
     }
 
-    /* ==================== SECCIÓN: ¿QUÉ ES? ==================== */
+    /* ==================== SECCIÓN GENERAL ==================== */
     .section {
       padding: 4rem 0;
       background: rgba(255, 255, 255, 0.92);
@@ -306,13 +306,21 @@
       background: #059ea0;
     }
 
-    /* ==================== CERTIFICACIÓN ==================== */
-    #certificacion .intro-text {
-      max-width: 700px;
-      margin: 1.5rem auto;
-      text-align: center;
+    /* ==================== TERAPIAS INDIVIDUALES ==================== */
+    #terapias .programas-grid {
+      gap: 1.8rem;
     }
 
+    #terapias .programa-card {
+      border-top: 4px solid var(--amber);
+    }
+
+    /* ==================== TALLERES COMPLEMENTARIOS ==================== */
+    #talleres .programa-card {
+      border-top: 4px solid var(--purple);
+    }
+
+    /* ==================== CERTIFICACIÓN ==================== */
     #certificacion ul {
       list-style: none;
       padding-left: 1.5rem;
@@ -484,7 +492,8 @@
       <nav>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#programas">Programas</a></li>
+          <li><a href="#formacion">Formación</a></li>
+          <li><a href="#terapias">Terapias</a></li>
           <li><a href="#talleres">Talleres</a></li>
           <li><a href="#certificacion">Certificación</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -499,7 +508,7 @@
       <h1>Maestrías Cristalinas®</h1>
       <p class="subtitle">Un camino de transformación a través del lenguaje sagrado de los Cristales. Formación completa para convertirte en un maestro sanador energético.</p>
       <div class="cta-buttons">
-        <a href="#programas" class="btn btn-primary">Conoce el Programa Principal</a>
+        <a href="#formacion" class="btn btn-primary">Conoce el Programa Principal</a>
         <a href="#talleres" class="btn btn-secondary">Explora Talleres Complementarios</a>
       </div>
     </div>
@@ -538,8 +547,8 @@
     </div>
   </section>
 
-  <!-- PROGRAMAS MODULARES M0-M4 -->
-  <section id="programas" class="section">
+  <!-- LA TRAVESÍA FORMATIVA (MÓDULOS M0-M4) -->
+  <section id="formacion" class="section">
     <div class="container">
       <h2>La Travesía Formativa</h2>
       <p class="intro-text">
@@ -580,6 +589,88 @@
           <h3>Módulo 4: Sabiduría Ancestral y Familias Cristalinas</h3>
           <p>Integración del conocimiento cristalino y prácticas chamánicas para sanación profunda.</p>
           <a href="modulo-4.html" class="btn-small">Saber más</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TERAPIAS INDIVIDUALES -->
+  <section id="terapias" class="section">
+    <div class="container">
+      <h2>Terapias Individuales</h2>
+      <p class="intro-text">
+        Espacios de escucha profunda, transformación y sanación energética.
+      </p>
+      <div class="programas-grid">
+        
+        <!-- Terapia 1 -->
+        <div class="programa-card">
+          <h3>Armonizar con Cristales®</h3>
+          <p>Protocolo único de sanación energética con aliados minerales. Identificación de bloqueos, liberación de densidades y reequilibrio del campo sutil.</p>
+          <a href="terapias.html#armonizar" class="btn-small">Saber más</a>
+        </div>
+
+        <!-- Terapia 2 -->
+        <div class="programa-card">
+          <h3>Tarot de Autoconocimiento</h3>
+          <p>Herramienta de percepción sutil para explorar patrones inconscientes y tomar decisiones conscientes desde la inteligencia vincular.</p>
+          <a href="terapias.html#tarot" class="btn-small">Saber más</a>
+        </div>
+
+        <!-- Terapia 3 -->
+        <div class="programa-card">
+          <h3>Terapia Floral</h3>
+          <p>Uso de esencias florales para equilibrar emociones, sanar memorias afectivas y fortalecer el vínculo contigo mismo.</p>
+          <a href="terapias.html#floral" class="btn-small">Saber más</a>
+        </div>
+
+        <!-- Terapia 4 -->
+        <div class="programa-card">
+          <h3>Masaje Energético Profundo</h3>
+          <p>Integración somática y energía consciente para liberar tensiones físicas y emocionales.</p>
+          <a href="terapias.html#masaje" class="btn-small">Saber más</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TALLERES COMPLEMENTARIOS -->
+  <section id="talleres" class="section">
+    <div class="container">
+      <h2>Talleres Especializados</h2>
+      <p class="intro-text">
+        Experiencias profundas que puedes tomar de forma independiente. Ideales para explorar temas específicos con intensidad ceremonial.
+      </p>
+      <div class="programas-grid">
+        
+        <!-- Taller 1 -->
+        <div class="programa-card">
+          <h3>Prácticas de Meditación (semanal)</h3>
+          <p>Sesiones vivenciales de meditación guiada con cristales, respiración consciente y mudras.</p>
+          <a href="talleres.html#meditacion" class="btn-small">Saber más</a>
+        </div>
+
+        <!-- Taller 2 -->
+        <div class="programa-card">
+          <h3>Camino de la Obsidiana</h3>
+          <p>Viaje chamánico guiado con obsidiana para liberar sombra, sanar heridas ancestrales y fortalecer el cuerpo de poder.</p>
+          <a href="talleres.html#obsidiana" class="btn-small">Saber más</a>
+        </div>
+
+        <!-- Taller 3 -->
+        <div class="programa-card">
+          <h3>Reiki Usui</h3>
+          <p>Formación en Reiki Usui Niveles I y II. Alineación energética, canalización y sanación a distancia.</p>
+          <a href="talleres.html#reiki" class="btn-small">Saber más</a>
+        </div>
+
+        <!-- Taller 4 -->
+        <div class="programa-card">
+          <h3>Arte de la Voluntad Consciente</h3>
+          <p>Desarrollo de la voluntad como herramienta de creación de realidades. Ejercicios prácticos y ceremonias de compromiso.</p>
+          <a href="talleres.html#voluntad" class="btn-small">Saber más</a>
         </div>
 
       </div>

@@ -79,7 +79,7 @@
       padding: 2rem 0;
     }
 
-    /* ==================== HEADER FLOTANTE ==================== */
+    /* ==================== HEADER FLOTANTE OPTIMIZADO ==================== */
     header {
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
@@ -87,7 +87,7 @@
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      padding: 0.8rem 0;
+      padding: 0.6rem 0;
     }
 
     .header-content {
@@ -97,13 +97,24 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .logo img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .logo-text {
       font-family: 'Merriweather', serif;
-      font-size: 1.8rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: #0d3b2a;
     }
 
-    .logo span {
+    .logo-text .highlight {
       color: var(--cyan);
     }
 
@@ -123,6 +134,48 @@
 
     nav a:hover {
       color: var(--cyan);
+    }
+
+    /* Botón móvil */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #0d3b2a;
+    }
+
+    /* Menú móvil */
+    .mobile-menu {
+      display: none;
+      background: rgba(255, 255, 255, 0.98);
+      padding: 1rem 0;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.8rem 1rem;
+      color: #0d3b2a;
+      text-decoration: none;
+      border-top: 1px solid #eee;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--cyan);
+      background: #f9f9fb;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+      }
+      .mobile-menu.active {
+        display: block;
+      }
     }
 
     /* ==================== HERO ==================== */
@@ -283,7 +336,6 @@
       color: #555;
     }
 
-    /* Bordas por módulo con colores de tu paleta */
     .m0 { border-top: 4px solid var(--cyan); }
     .m1 { border-top: 4px solid var(--blue); }
     .m2 { border-top: 4px solid var(--indigo); }
@@ -307,10 +359,6 @@
     }
 
     /* ==================== TERAPIAS INDIVIDUALES ==================== */
-    #terapias .programas-grid {
-      gap: 1.8rem;
-    }
-
     #terapias .programa-card {
       border-top: 4px solid var(--amber);
     }
@@ -318,33 +366,6 @@
     /* ==================== TALLERES COMPLEMENTARIOS ==================== */
     #talleres .programa-card {
       border-top: 4px solid var(--purple);
-    }
-
-    /* ==================== CERTIFICACIÓN ==================== */
-    #certificacion ul {
-      list-style: none;
-      padding-left: 1.5rem;
-      margin: 1.5rem auto;
-      max-width: 700px;
-      text-align: left;
-    }
-
-    #certificacion ul li {
-      margin-bottom: 0.8rem;
-      position: relative;
-    }
-
-    #certificacion ul li::before {
-      content: '✔️';
-      color: var(--cyan);
-      margin-right: 0.6rem;
-    }
-
-    #certificacion p.aviso {
-      text-align: center;
-      font-style: italic;
-      color: var(--cyan);
-      margin-top: 1rem;
     }
 
     /* ==================== CLASE GRATUITA ==================== */
@@ -410,7 +431,7 @@
       font-size: 0.95rem;
     }
 
-    footer .logo {
+    footer .logo-text {
       font-size: 1.6rem;
       margin-bottom: 1rem;
     }
@@ -460,83 +481,39 @@
     @media (max-width: 768px) {
       h1 { font-size: 2.3rem; }
       h2 { font-size: 1.8rem; }
-
-      nav ul {
-        gap: 1rem;
-        font-size: 0.9rem;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .hero, .section {
-        padding: 3rem 1.5rem;
-        margin: 1.5rem auto;
-      }
+      .container { width: 95%; }
+      .hero, .section { padding: 3rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER FLORANTE -->
-<!-- HEADER FLOTANTE - Versión optimizada -->
-<header class="bg-white/95 backdrop-blur-sm border-b border-gray-200">
-  <div class="container flex justify-between items-center py-3 md:py-4">
-    <!-- Logo: Isologo de Resonancias -->
-    <div class="flex items-center space-x-3">
-      <img 
-        src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" 
-        alt="Resonancias en salud y vida®" 
-        class="w-12 h-12 object-contain">
-      <div>
-        <h1 class="text-lg font-bold text-cyan-500">Resonancias</h1>
-        <p class="text-xs text-cyan-500 font-medium">en salud y vida®</p>
+  <!-- HEADER FLOTANTE CON ISOLÓGO -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" alt="Resonancias en salud y vida®">
+        <div class="logo-text">Resonancias<br><span class="highlight">en salud y vida®</span></div>
       </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#formacion">Formación</a></li>
+          <li><a href="#terapias">Terapias</a></li>
+          <li><a href="#talleres">Talleres</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </nav>
     </div>
-
-    <!-- Menú Desktop -->
-    <nav class="hidden md:flex space-x-6">
-      <a href="#inicio" class="text-gray-700 hover:text-cyan-600 font-medium">Inicio</a>
-      <a href="#sobre-leon" class="text-gray-700 hover:text-cyan-600 font-medium">Sobre León</a>
-      <a href="#formacion" class="text-gray-700 hover:text-cyan-600 font-medium">Formación</a>
-      <a href="#contacto" class="text-gray-700 hover:text-cyan-600 font-medium">Contacto</a>
-    </nav>
-
-    <!-- Menú Móvil -->
-    <button 
-      class="md:hidden text-gray-700 focus:outline-none"
-      onclick="toggleMenu()">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Menú móvil desplegable -->
-  <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm hidden">
-    <div class="container py-3 space-y-2">
-      <a href="#inicio" class="block text-gray-700 hover:text-cyan-600 font-medium py-2 border-t border-gray-100">Inicio</a>
-      <a href="#sobre-leon" class="block text-gray-700 hover:text-cyan-600 font-medium py-2 border-t border-gray-100">Sobre León</a>
-      <a href="#formacion" class="block text-gray-700 hover:text-cyan-600 font-medium py-2 border-t border-gray-100">Formación</a>
-      <a href="#contacto" class="block text-gray-700 hover:text-cyan-600 font-medium py-2 border-t border-gray-100">Contacto</a>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#formacion">Formación</a>
+      <a href="#terapias">Terapias</a>
+      <a href="#talleres">Talleres</a>
+      <a href="#contacto">Contacto</a>
     </div>
-  </div>
-</header>
-
-<!-- Script para menú móvil -->
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  }
-</script>
+  </header>
 
   <!-- HERO -->
   <section id="inicio" class="container">
@@ -592,35 +569,30 @@
       </p>
       <div class="programas-grid">
         
-        <!-- Módulo 0 -->
         <div class="programa-card m0">
           <h3>Módulo 0: El Despertar Cristalino</h3>
           <p>Descubre los fundamentos para la sanación con cristales. Aprende a elegir tus aliados minerales, limpiarlos, cargarlos y aplicar protocolos básicos de armonización energética.</p>
           <a href="modulo-0.html" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Módulo 1 -->
         <div class="programa-card m1">
           <h3>Módulo 1: Descubre tu Esencia Cristalina</h3>
           <p>Domina chakras, geometrías sagradas y protocolos avanzados para equilibrar tu energía y transformar tu realidad con el poder de los cristales.</p>
           <a href="modulo-1.html" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Módulo 2 -->
         <div class="programa-card m2">
           <h3>Módulo 2: Escudo y Ritual – Protección Energética</h3>
           <p>Convierte la protección energética en un ritual consciente y cotidiano con aliados cristalinos.</p>
           <a href="modulo-2.html" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Módulo 3 -->
         <div class="programa-card m3">
           <h3>Módulo 3: El Arte y la Ciencia de la Terapia</h3>
           <p>Acompaña procesos de sanación con ética, humildad y conciencia. Protocolo completo de Armonizar con Cristales®.</p>
           <a href="modulo-3.html" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Módulo 4 -->
         <div class="programa-card m4">
           <h3>Módulo 4: Sabiduría Ancestral y Familias Cristalinas</h3>
           <p>Integración del conocimiento cristalino y prácticas chamánicas para sanación profunda.</p>
@@ -640,28 +612,24 @@
       </p>
       <div class="programas-grid">
         
-        <!-- Terapia 1 -->
         <div class="programa-card">
           <h3>Armonizar con Cristales®</h3>
           <p>Protocolo único de sanación energética con aliados minerales. Identificación de bloqueos, liberación de densidades y reequilibrio del campo sutil.</p>
           <a href="terapias.html#armonizar" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Terapia 2 -->
         <div class="programa-card">
           <h3>Tarot de Autoconocimiento</h3>
           <p>Herramienta de percepción sutil para explorar patrones inconscientes y tomar decisiones conscientes desde la inteligencia vincular.</p>
           <a href="terapias.html#tarot" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Terapia 3 -->
         <div class="programa-card">
           <h3>Terapia Floral</h3>
           <p>Uso de esencias florales para equilibrar emociones, sanar memorias afectivas y fortalecer el vínculo contigo mismo.</p>
           <a href="terapias.html#floral" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Terapia 4 -->
         <div class="programa-card">
           <h3>Masaje Energético Profundo</h3>
           <p>Integración somática y energía consciente para liberar tensiones físicas y emocionales.</p>
@@ -681,28 +649,24 @@
       </p>
       <div class="programas-grid">
         
-        <!-- Taller 1 -->
         <div class="programa-card">
           <h3>Prácticas de Meditación (semanal)</h3>
           <p>Sesiones vivenciales de meditación guiada con cristales, respiración consciente y mudras.</p>
           <a href="talleres.html#meditacion" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Taller 2 -->
         <div class="programa-card">
           <h3>Camino de la Obsidiana</h3>
           <p>Viaje chamánico guiado con obsidiana para liberar sombra, sanar heridas ancestrales y fortalecer el cuerpo de poder.</p>
           <a href="talleres.html#obsidiana" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Taller 3 -->
         <div class="programa-card">
           <h3>Reiki Usui</h3>
           <p>Formación en Reiki Usui Niveles I y II. Alineación energética, canalización y sanación a distancia.</p>
           <a href="talleres.html#reiki" class="btn-small">Saber más</a>
         </div>
 
-        <!-- Taller 4 -->
         <div class="programa-card">
           <h3>Arte de la Voluntad Consciente</h3>
           <p>Desarrollo de la voluntad como herramienta de creación de realidades. Ejercicios prácticos y ceremonias de compromiso.</p>
@@ -720,13 +684,13 @@
       <p class="intro-text">
         Al completar el trayecto de Maestrías Cristalinas® (M0 a M4) y presentar un proyecto final de integración, podrás optar por la certificación como <strong>Maestro Sanador Energético con Cristales</strong>.
       </p>
-      <ul>
-        <li>Acceso a red de egresados internacionales</li>
-        <li>Herramientas para comenzar tu práctica profesional</li>
-        <li>Uso ético del sello <strong>Armonizar con Cristales®</strong></li>
-        <li>Acompañamiento post-formación</li>
+      <ul style="list-style: none; padding-left: 1.5rem; margin: 1.5rem auto; max-width: 700px; text-align: left;">
+        <li style="margin-bottom: 0.8rem; position: relative;"><span style="color: var(--cyan); margin-right: 0.6rem;">✔️</span>Acceso a red de egresados internacionales</li>
+        <li style="margin-bottom: 0.8rem;"><span style="color: var(--cyan); margin-right: 0.6rem;">✔️</span>Herramientas para comenzar tu práctica profesional</li>
+        <li style="margin-bottom: 0.8rem;"><span style="color: var(--cyan); margin-right: 0.6rem;">✔️</span>Uso ético del sello <strong>Armonizar con Cristales®</strong></li>
+        <li><span style="color: var(--cyan); margin-right: 0.6rem;">✔️</span>Acompañamiento post-formación</li>
       </ul>
-      <p class="aviso">
+      <p style="text-align: center; font-style: italic; color: var(--cyan); margin-top: 1rem;">
         La certificación es opcional y requiere compromiso con la disciplina consciente y el ayni (reciprocidad) con la enseñanza.
       </p>
     </div>
@@ -750,7 +714,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <div class="logo">Maestrías <span>Cristalinas®</span></div>
+      <div class="logo-text">Resonancias<br><span class="highlight">en salud y vida®</span></div>
       <p>Formación en sanación energética con cristales</p>
       <p>© 2025 Resonancias en salud y vida®. Todos los derechos reservados.</p>
       <div class="social-links">
@@ -766,6 +730,14 @@
   <a href="https://wa.me/5493416690731" target="_blank" class="whatsapp-btn">
     💬 Escríbenos
   </a>
+
+  <!-- SCRIPT MENÚ MÓVIL -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>

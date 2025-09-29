@@ -3,256 +3,641 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maestrías Cristalinas® - Resonancias en salud y vida</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Maestrías Cristalinas® – Formación en sanación energética con cristales. Aprende el arte sagrado de Armonizar con Cristales®."/>
+  <meta name="keywords" content="sanación con cristales, formación con minerales, Armonizar con Cristales®, Maestrías Cristalinas®, chamanismo, autoconocimiento, terapia energética"/>
+  <title>Maestrías Cristalinas® – Formación en Sanación con Cristales</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body { 
-      font-family: 'Inter', sans-serif; 
-      scroll-behavior: smooth;
+    /* ==================== VARIABLES DE COLOR CONFIRMADAS ==================== */
+    :root {
+      --cyan: #06b6d4;
+      --blue: #3b82f6;
+      --teal: #14b8a6;
+      --indigo: #6366f1;
+      --purple: #8b5cf6;
+      --amber: #f59e0b;
+      --light-bg: #f9fafb;
+      --text-dark: #1f2937;
     }
-    h1, h2, h3, h4, h5, h6 { 
-      font-family: 'Playfair Display', serif; 
+
+    /* ==================== RESET Y BASE ==================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .bg-header {
-      background-image: url('https://i.ibb.co/4wvtW7L8/Amatista.jpg');
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.7;
+      background-color: var(--light-bg);
+      background-image: url('https://images.unsplash.com/photo-1583385770016-2be8b1d72a32?q=80&w=2000');
       background-size: cover;
-      opacity: 0.15;
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+      background-attachment: fixed;
+      background-position: center;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.94);
+      z-index: -1;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', serif;
+      color: #0d3b2a;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* ==================== HEADER FLOTANTE ==================== */
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 0.8rem 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Merriweather', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0d3b2a;
+    }
+
+    .logo span {
+      color: var(--cyan);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0d3b2a;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--cyan);
+    }
+
+    /* ==================== HERO ==================== */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,248,245,0.95));
+      border-radius: 16px;
+      margin: 2rem auto;
+      max-width: 1100px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      color: #0d3b2a;
+      margin-bottom: 1rem;
+    }
+
+    .hero .subtitle {
+      font-size: 1.3rem;
+      color: var(--cyan);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      letter-spacing: 0.8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #059ea0;
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--cyan);
+      border: 2px solid var(--cyan);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(6, 182, 212, 0.1);
+      transform: translateY(-3px);
+    }
+
+    /* ==================== SECCIÓN: ¿QUÉ ES? ==================== */
+    .section {
+      padding: 4rem 0;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 16px;
+      margin: 2rem auto;
+      max-width: 1100px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      text-align: center;
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--cyan);
+      margin: 0.8rem auto;
+    }
+
+    .intro-text {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* ==================== BIENVENIDA LEÓN MEOTTO ==================== */
+    .bienvenida {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .bienvenida-img {
+      flex: 1;
+      min-width: 280px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .bienvenida-img img {
+      object-fit: cover;
+    }
+
+    .bienvenida-text {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .bienvenida-text p {
+      font-style: italic;
+      color: var(--cyan);
+      margin: 1.2rem 0;
+    }
+
+    /* ==================== PROGRAMAS (MÓDULOS M0-M4) ==================== */
+    .programas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .programa-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .programa-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .programa-card h3 {
+      color: #0d3b2a;
+    }
+
+    .programa-card p {
+      color: #555;
+    }
+
+    /* Bordas por módulo con colores de tu paleta */
+    .m0 { border-top: 4px solid var(--cyan); }
+    .m1 { border-top: 4px solid var(--blue); }
+    .m2 { border-top: 4px solid var(--indigo); }
+    .m3 { border-top: 4px solid var(--teal); }
+    .m4 { border-top: 4px solid var(--purple); }
+
+    .programa-card .btn-small {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.4rem;
+      background: var(--cyan);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .programa-card .btn-small:hover {
+      background: #059ea0;
+    }
+
+    /* ==================== CERTIFICACIÓN ==================== */
+    #certificacion .intro-text {
+      max-width: 700px;
+      margin: 1.5rem auto;
+      text-align: center;
+    }
+
+    #certificacion ul {
+      list-style: none;
+      padding-left: 1.5rem;
+      margin: 1.5rem auto;
+      max-width: 700px;
+      text-align: left;
+    }
+
+    #certificacion ul li {
+      margin-bottom: 0.8rem;
+      position: relative;
+    }
+
+    #certificacion ul li::before {
+      content: '✔️';
+      color: var(--cyan);
+      margin-right: 0.6rem;
+    }
+
+    #certificacion p.aviso {
+      text-align: center;
+      font-style: italic;
+      color: var(--cyan);
+      margin-top: 1rem;
+    }
+
+    /* ==================== CLASE GRATUITA ==================== */
+    .clase-gratuita {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #e8f5f7, #d0ecf2);
+      border-radius: 16px;
+      margin: 3rem auto;
+      max-width: 900px;
+    }
+
+    .clase-gratuita h2 {
+      color: #0d3b2a;
+    }
+
+    .clase-form {
+      max-width: 500px;
+      margin: 1.5rem auto;
+    }
+
+    .clase-form input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .clase-form button {
+      background: var(--cyan);
+      color: white;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .clase-form button:hover {
+      background: #059ea0;
+    }
+
+    .aviso {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 4rem;
+      color: #0d3b2a;
+      font-size: 0.95rem;
+    }
+
+    footer .logo {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    .social-links {
+      margin: 1.5rem 0;
+    }
+
+    .social-links a {
+      margin: 0 1rem;
+      font-size: 1.4rem;
+      color: #0d3b2a;
+      text-decoration: none;
+    }
+
+    /* ==================== WHATSAPP FLOTANTE ==================== */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.3rem; }
+      h2 { font-size: 1.8rem; }
+
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .hero, .section {
+        padding: 3rem 1.5rem;
+        margin: 1.5rem auto;
+      }
     }
   </style>
 </head>
-<body class="min-h-screen relative bg-gradient-to-br from-cyan-50 via-white to-teal-50">
+<body>
 
-  <div class="bg-header"></div>
-  <div class="relative z-10 max-w-6xl mx-auto px-6">
+  <!-- HEADER FLORANTE -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">Maestrías <span>Cristalinas®</span></div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#programas">Programas</a></li>
+          <li><a href="#talleres">Talleres</a></li>
+          <li><a href="#certificacion">Certificación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Header -->
-    <header class="py-6 flex justify-between items-center border-b border-gray-200">
-      <div class="flex items-center space-x-3">
-        <img src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" alt="Resonancias" class="w-14 h-14 object-contain">
-        <div>
-          <h1 class="text-2xl font-bold text-cyan-500">Resonancias</h1>
-          <p class="text-sm text-cyan-500">en salud y vida®</p>
+  <!-- HERO -->
+  <section id="inicio" class="container">
+    <div class="hero">
+      <h1>Maestrías Cristalinas®</h1>
+      <p class="subtitle">Un camino de transformación a través del lenguaje sagrado de los Cristales. Formación completa para convertirte en un maestro sanador energético.</p>
+      <div class="cta-buttons">
+        <a href="#programas" class="btn btn-primary">Conoce el Programa Principal</a>
+        <a href="#talleres" class="btn btn-secondary">Explora Talleres Complementarios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿QUÉ ES MAESTRÍAS CRISTALINAS®? -->
+  <section class="section">
+    <div class="container">
+      <h2>¿Qué es Maestrías Cristalinas®?</h2>
+      <p class="intro-text">
+        Un sendero de sanación y autoconocimiento que integra ciencia vibracional, sabiduría ancestral y disciplina consciente. 
+        A través del método <strong>Armonizar con Cristales®</strong>, aprendes a escuchar, dialogar y co-crear con tus aliados cristalinos.
+      </p>
+
+      <!-- Bienvenida de León Meotto -->
+      <div class="bienvenida">
+        <div class="bienvenida-img">
+          <img src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg" alt="León Meotto - Terapeuta Energético">
+        </div>
+        <div class="bienvenida-text">
+          <h3>Bienvenida de León Meotto</h3>
+          <p>
+            Terapeuta energético, formador y guía espiritual con más de 20 años de experiencia en sanación con cristales, 
+            lenguaje corporal y técnicas ancestrales.
+          </p>
+          <p>
+            Fundador de <strong>Resonancias en salud y vida®</strong>, acompaño a personas de todo el mundo 
+            en su proceso de transformación interior a través del poder sanador del movimiento consciente y la vibración mineral.
+          </p>
+          <p>
+            “La danza y los cristales me revelaron su lenguaje ancestral: así nació la práctica de <strong>Armonizar con Cristales®</strong>, 
+            el arte sagrado de transformar vibración en sanación.”
+          </p>
         </div>
       </div>
-      <nav class="hidden md:flex space-x-8 text-gray-700">
-        <a href="#inicio" class="hover:text-cyan-600 font-medium">Inicio</a>
-        <a href="#formacion" class="hover:text-cyan-600 font-medium">Formación</a>
-        <a href="#sobre-leon" class="hover:text-cyan-600 font-medium">Sobre León</a>
-        <a href="#contacto" class="hover:text-cyan-600 font-medium">Contacto</a>
-      </nav>
-    </header>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="py-24 text-center">
-      <div class="inline-flex items-center px-6 py-3 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium mb-8 shadow-sm">
-        🌟 Todo es vibración de amor
-      </div>
-      <h2 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-8">
-        Maestrías
-        <span class="block bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-          Cristalinas®
-        </span>
-      </h2>
-      <p class="text-xl text-gray-600 italic mb-4 max-w-3xl mx-auto">
-        Un camino de transformación a través del lenguaje sagrado de los cristales.
+  <!-- PROGRAMAS MODULARES M0-M4 -->
+  <section id="programas" class="section">
+    <div class="container">
+      <h2>La Travesía Formativa</h2>
+      <p class="intro-text">
+        De los fundamentos a la maestría profesional, paso a paso.
       </p>
-      <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-        Formación completa para convertirte en un maestro sanador energético, desde la ciencia vibracional, la geometría sagrada y la reciprocidad con tus aliados cristalinos.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button 
-          onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})"
-          class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-200">
-          Clase Gratuita
-        </button>
-        <button 
-          onclick="document.getElementById('formacion').scrollIntoView({behavior: 'smooth'})"
-          class="border-2 border-cyan-500 text-cyan-700 px-8 py-4 rounded-full font-semibold hover:bg-cyan-50 transition-colors duration-200">
-          Ver Programas
-        </button>
-      </div>
-    </section>
-
-    <!-- Video de Bienvenida -->
-    <section class="my-24 max-w-4xl mx-auto">
-      <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Bienvenida</h3>
-      <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-        <iframe 
-          src="https://www.youtube.com/embed/oox3oEBQAfE?si=H7rrbKAclIFtItUg" 
-          title="Video de bienvenida - León Meotto"
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen
-          class="w-full h-full">
-        </iframe>
-      </div>
-    </section>
-
-    <!-- ¿Qué es Maestrías Cristalinas®? -->
-    <section class="my-24 max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold text-gray-900 mb-8">¿Qué es Maestrías Cristalinas®?</h3>
-      <p class="text-lg text-gray-600 leading-relaxed mb-6">
-        Un sendero de sanación y autoconocimiento que integra ciencia vibracional, sabiduría ancestral y disciplina consciente.
-      </p>
-      <p class="text-lg text-gray-600 leading-relaxed mb-6">
-        A través del método <strong>Armonizar con Cristales®</strong>, aprendes a escuchar, dialogar y co-crear con tus aliados cristalinos, activando tu percepción sutil y tu protagonismo personal.
-      </p>
-      <p class="text-lg text-gray-600 leading-relaxed">
-        Este camino no es solo sobre técnicas. Es una ceremonia de transformación continua, basada en la reciprocidad (<em>ayni</em>) y el diálogo vibracional.
-      </p>
-    </section>
-
-    <!-- Formación - Travesía Modular -->
-    <section id="formacion" class="my-24">
-      <h3 class="text-3xl font-bold text-center text-gray-900 mb-16">La Travesía Formativa</h3>
-
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+      <div class="programas-grid">
         
         <!-- Módulo 0 -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-cyan-500">
-          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 0</h4>
-          <p class="text-sm text-gray-600">El Despertar Cristalino</p>
+        <div class="programa-card m0">
+          <h3>Módulo 0: El Despertar Cristalino</h3>
+          <p>Descubre los fundamentos para la sanación con cristales. Aprende a elegir tus aliados minerales, limpiarlos, cargarlos y aplicar protocolos básicos de armonización energética.</p>
+          <a href="modulo-0.html" class="btn-small">Saber más</a>
         </div>
 
         <!-- Módulo 1 -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-blue-500">
-          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 1</h4>
-          <p class="text-sm text-gray-600">Descubre tu Esencia Cristalina</p>
+        <div class="programa-card m1">
+          <h3>Módulo 1: Descubre tu Esencia Cristalina</h3>
+          <p>Domina chakras, geometrías sagradas y protocolos avanzados para equilibrar tu energía y transformar tu realidad con el poder de los cristales.</p>
+          <a href="modulo-1.html" class="btn-small">Saber más</a>
         </div>
 
         <!-- Módulo 2 -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-indigo-500">
-          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 2</h4>
-          <p class="text-sm text-gray-600">Escudo y Ritual – Protección Energética</p>
+        <div class="programa-card m2">
+          <h3>Módulo 2: Escudo y Ritual – Protección Energética</h3>
+          <p>Convierte la protección energética en un ritual consciente y cotidiano con aliados cristalinos.</p>
+          <a href="modulo-2.html" class="btn-small">Saber más</a>
         </div>
 
         <!-- Módulo 3 -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-teal-500">
-          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 3</h4>
-          <p class="text-sm text-gray-600">El Arte y la Ciencia de la Terapia</p>
+        <div class="programa-card m3">
+          <h3>Módulo 3: El Arte y la Ciencia de la Terapia</h3>
+          <p>Acompaña procesos de sanación con ética, humildad y conciencia. Protocolo completo de Armonizar con Cristales®.</p>
+          <a href="modulo-3.html" class="btn-small">Saber más</a>
         </div>
 
         <!-- Módulo 4 -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-purple-500">
-          <h4 class="font-bold text-gray-900 text-lg mb-3">Módulo 4</h4>
-          <p class="text-sm text-gray-600">Sabiduría Ancestral y Familias Cristalinas</p>
+        <div class="programa-card m4">
+          <h3>Módulo 4: Sabiduría Ancestral y Familias Cristalinas</h3>
+          <p>Integración del conocimiento cristalino y prácticas chamánicas para sanación profunda.</p>
+          <a href="modulo-4.html" class="btn-small">Saber más</a>
         </div>
 
       </div>
+    </div>
+  </section>
 
-      <div class="text-center mt-16">
-        <a 
-          href="certificacion.html" 
-          class="inline-block bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg text-sm">
-          Camino de Certificación Profesional
-        </a>
+  <!-- CERTIFICACIÓN OFICIAL -->
+  <section id="certificacion" class="section">
+    <div class="container">
+      <h2>Certificación Oficial</h2>
+      <p class="intro-text">
+        Al completar el trayecto de Maestrías Cristalinas® (M0 a M4) y presentar un proyecto final de integración, podrás optar por la certificación como <strong>Maestro Sanador Energético con Cristales</strong>.
+      </p>
+      <ul>
+        <li>Acceso a red de egresados internacionales</li>
+        <li>Herramientas para comenzar tu práctica profesional</li>
+        <li>Uso ético del sello <strong>Armonizar con Cristales®</strong></li>
+        <li>Acompañamiento post-formación</li>
+      </ul>
+      <p class="aviso">
+        La certificación es opcional y requiere compromiso con la disciplina consciente y el ayni (reciprocidad) con la enseñanza.
+      </p>
+    </div>
+  </section>
+
+  <!-- CLASE GRATUITA -->
+  <section class="clase-gratuita" id="contacto">
+    <h2>Accede a tu Clase Gratuita</h2>
+    <p>Descubre cómo los cristales pueden transformar tu energía y tu propósito.</p>
+    <div class="clase-form">
+      <form action="https://formspree.io/f/xanbaawp" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <input type="tel" name="whatsapp" placeholder="+54 9 3416690731" required />
+        <button type="submit">Obtener clase gratuita</button>
+      </form>
+      <p class="aviso">Tu información está segura. Nunca compartiremos tus datos.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="logo">Maestrías <span>Cristalinas®</span></div>
+      <p>Formación en sanación energética con cristales</p>
+      <p>© 2025 Resonancias en salud y vida®. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/resonanciasensaludyvida">Instagram</a>
+        <a href="https://www.youtube.com/@resonanciassaludyvida6900">YouTube</a>
+        <a href="mailto:resonanciassaludyvida@gmail.com">Email</a>
       </div>
-    </section>
+      <p><a href="#" style="color: var(--cyan);">Política de privacidad</a></p>
+    </div>
+  </footer>
 
-    <!-- Sobre León Meotto -->
-    <section id="sobre-leon" class="my-24">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div>
-          <h3 class="text-3xl font-bold text-gray-900 mb-6">León Meotto</h3>
-          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-            Terapeuta energético, formador y guía espiritual con más de 20 años de experiencia en sanación con cristales, lenguaje corporal y técnicas ancestrales.
-          </p>
-          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-            Fundador de <strong>Resonancias en salud y vida®</strong>, acompaña a personas de todo el mundo en su proceso de transformación interior a través del poder sanador del movimiento consciente y la vibración mineral.
-          </p>
-          <div class="flex space-x-12">
-            <div class="text-center">
-              <div class="text-2xl font-bold text-cyan-600">20+</div>
-              <div class="text-sm text-gray-500">Años de experiencia</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl font-bold text-purple-600">1000+</div>
-              <div class="text-sm text-gray-500">Alumnos transformados</div>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center">
-          <img 
-            src="https://i.ibb.co/1fVYB9rK/Leon-blanco.jpg" 
-            alt="León Meotto - Terapeuta Energético" 
-            class="rounded-2xl shadow-xl w-80 object-cover border-4 border-white">
-        </div>
-      </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="my-24">
-      <div class="bg-white rounded-2xl shadow-xl p-10 text-center max-w-3xl mx-auto">
-        <h3 class="text-2xl font-bold text-gray-900 mb-6">Accede a tu Clase Gratuita</h3>
-        <p class="text-gray-600 mb-8">Completa el formulario y recibirás el enlace a la clase por correo.</p>
-
-        <form action="https://formspree.io/f/xanbaawp" method="POST" class="space-y-5">
-          <input 
-            type="text" 
-            name="nombre" 
-            placeholder="Nombre completo" 
-            required 
-            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-base">
-
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Correo electrónico" 
-            required 
-            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-base">
-
-          <input 
-            type="tel" 
-            name="whatsapp" 
-            placeholder="+54 9 11 1234-5678" 
-            pattern="^\+[0-9]{1,4}[\s\-]?[0-9\s\-]{6,}$"
-            title="Ingresa tu número completo con código de país. Ej: +54 9 11 1234-5678"
-            required 
-            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent text-base"
-            autocomplete="tel">
-
-          <input type="hidden" name="_next" value="https://maestriascristalinas.netlify.app/#gracias">
-
-          <button 
-            type="submit"
-            class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 text-base">
-            Acceder a Clase Gratuita
-          </button>
-        </form>
-
-        <p class="text-sm text-gray-500 mt-6">
-          Tu información está segura. Nunca compartiremos tus datos.
-        </p>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="mt-24 pt-10 border-t border-gray-200 text-center text-gray-600 pb-6">
-      <div class="flex justify-center space-x-10 mb-6">
-        <a href="terapias.html" class="text-gray-500 hover:text-cyan-600 font-medium">Terapias</a>
-        <a href="talleres.html" class="text-gray-500 hover:text-cyan-600 font-medium">Talleres</a>
-        <a href="tienda.html" class="text-gray-500 hover:text-cyan-600 font-medium">Tienda</a>
-        <a href="blog.html" class="text-gray-500 hover:text-cyan-600 font-medium">Blog</a>
-        <a href="#" class="text-gray-500 hover:text-cyan-600 font-medium">Políticas</a>
-      </div>
-      <p class="text-sm">&copy; 2024 Resonancias en salud y vida®. Todo es vibración de amor.</p>
-    </footer>
-
-  </div>
-
-  <!-- Botón flotante de WhatsApp -->
-  <a 
-    href="https://wa.me/5493416690731" 
-    target="_blank" 
-    class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors duration-200 z-50"
-    style="border: 3px solid white;"
-    aria-label="Contactar por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.194 5.077 4.34.462.185.8.3.97.371.173.07.371.07.57.07.198 0 .742-.104 1.128-.327.387-.224 1.129-.967 1.277-1.165.148-.198.247-.347.346-.57.099-.224.05-.422-.025-.57-.075-.149-.272-.372-.57-.67m-11.096 1.67c-.123 0-.246-.049-.345-.148-.297-.297-.173-.792.124-1.04 2.58-2.122 5.56-4.809 5.95-5.107.386-.297 1.03-.173 1.327.124.297.297.173.792-.124 1.04-2.68 2.22-5.66 4.907-5.95 5.205-.1.099-.248.148-.396.148"/>
-    </svg>
+  <!-- BOTÓN WHATSAPP -->
+  <a href="https://wa.me/5493416690731" target="_blank" class="whatsapp-btn">
+    💬 Escríbenos
   </a>
 
 </body>

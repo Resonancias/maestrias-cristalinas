@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>León Meotto | Resonancias en salud y vida®</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif; 
+    }
+    .bg-header {
+      background-image: url('https://i.ibb.co/4wvtW7L8/Amatista.jpg');
+      background-size: cover;
+      opacity: 0.1;
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen relative bg-gradient-to-br from-purple-50 via-white to-pink-50">
+  <div class="bg-header"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 py-12">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-8">
+      <div class="flex items-center space-x-3">
+        <img src="https://i.ibb.co/ZpGJwSfN/solo-logo-2x-TURQUESA.png" alt="Resonancias" class="w-12 h-12 object-contain">
+        <div>
+          <h1 class="text-xl font-bold text-cyan-500">Resonancias</h1>
+          <p class="text-sm text-cyan-500">en salud y vida®</p>
+        </div>
+      </div>
+      <a href="index.html" class="text-purple-700 hover:text-purple-900 font-medium">← Volver al inicio</a>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center py-8 mb-10">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">León Meotto</h2>
+      <div class="flex justify-center mb-6">
+        <img 
+          src="https://i.ibb.co/4wvtW7L8/Amatista.jpg" 
+          alt="León Meotto" 
+          class="w-32 h-32 rounded-full object-cover border-4 border-purple-200 shadow-sm"
+        >
+      </div>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+        Terapeuta holístico, formador y guía espiritual con más de 20 años de experiencia en sanación con cristales, lenguaje corporal y técnicas ancestrales.
+      </p>
+    </section>
+
+    <!-- Trayectoria -->
+    <section class="mb-10">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">Camino y práctica</h3>
+      <p class="text-gray-600 mb-4">
+        Bailarín y maestro de danza, mi vínculo con el movimiento consciente y el reino mineral me reveló un lenguaje ancestral: así nació la práctica de <strong>Armonizar con Cristales®</strong>, el arte sagrado de transformar vibración en sanación.
+      </p>
+      <p class="text-gray-600">
+        Soy miembro fundador del espacio terapéutico y pedagógico <strong>Resonancias en salud y vida®</strong>, desde donde acompaño a personas de todo el mundo en su proceso de transformación interior.
+      </p>
+    </section>
+
+    <!-- Formación complementaria -->
+    <section class="mb-10">
+      <h3 class="text-xl font-bold text-gray-900 mb-3">Formación complementaria</h3>
+      <ul class="space-y-2 text-gray-600 text-sm">
+        <li>• Maestría en Chamanismo Andino Ancestral</li>
+        <li>• Maestro de Reiki Usui</li>
+        <li>• Terapeuta Floral</li>
+        <li>• Tarotista de autoconocimiento</li>
+        <li>• Practicante de Meditación de consciencia plena (Mindfulness)</li>
+        <li>• Iniciado en la lectura de Registros Akáshicos</li>
+        <li>• Estudios en Reflexología, Feng Shui, Radiestesia, Física cuántica y Astrología</li>
+      </ul>
+    </section>
+
+    <!-- Redes y contacto -->
+    <section class="mb-10 bg-purple-50 p-5 rounded-xl">
+      <h3 class="text-xl font-bold text-gray-900 mb-3">Conectá con Resonancias</h3>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <a href="https://www.instagram.com/resonanciasensaludyvida" target="_blank" class="text-purple-600 hover:underline">Instagram</a>
+        <a href="https://www.facebook.com/Resonanciasensaludyvida" target="_blank" class="text-purple-600 hover:underline">Facebook</a>
+        <a href="https://wa.me/5493416690731" target="_blank" class="text-purple-600 hover:underline">WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Invitación suave -->
+    <section class="text-center py-8 bg-white/80 backdrop-blur-sm rounded-2xl border-l-4 border-purple-500">
+      <p class="text-gray-700 mb-4">
+        Si este camino resuena en vos, te invito a explorar el próximo seminario:
+      </p>
+      <h3 class="text-xl font-bold text-purple-700 mb-4">Sabiduría Ancestral y Maestrías Cristalinas</h3>
+      <a 
+        href="./modulo-4-espana.html" 
+        class="inline-block bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-200 text-sm">
+        Conocé más
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 pt-6 border-t border-gray-200 text-center text-gray-600 text-sm">
+      &copy; 2025–2026 Resonancias en salud y vida®. Todo es vibración de amor.
+    </footer>
+  </div>
+</body>
+</html>

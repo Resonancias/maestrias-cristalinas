@@ -358,53 +358,54 @@ src="https://www.facebook.com/tr?id=122911949702512&ev=PageView&noscript=1"
     <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Accede a tu Clase Gratuita</h3>
     <p class="text-gray-600 text-center mb-6">Completa el formulario y recibirás el enlace a la clase por correo.</p>
 
-    <!-- Formulario conectado a Formspree -->
-    <form action="https://formspree.io/f/xanbaawp" method="POST" class="space-y-4">
-      <input 
-        type="text" 
-        name="nombre" 
-        placeholder="Nombre completo" 
-        required 
-        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+   <!-- Formulario conectado a Formspree -->
+<form action="https://formspree.io/f/xanbaawp" method="POST" class="space-y-4">
+  <input 
+    type="text" 
+    name="nombre" 
+    placeholder="Nombre completo" 
+    required 
+    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
 
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="Correo electrónico" 
-        required 
-        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+  <input 
+    type="email" 
+    name="email" 
+    placeholder="Correo electrónico" 
+    required 
+    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
 
-<!-- Campo WhatsApp con código internacional abierto -->
-<label for="whatsapp" class="block text-sm font-medium text-gray-700">
-  WhatsApp (código internacional incluido)
-</label>
-<input 
-  type="tel" 
-  id="whatsapp"
-  name="whatsapp" 
-  placeholder="+54 9 11 1234-5678" 
-  pattern="^\+[0-9]{1,4}[\s\-]?[0-9\s\-]{6,}$"
-  title="Ingresa tu número completo con código de país. Ej: +54 9 11 1234-5678"
-  required 
-  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-  autocomplete="tel">
-<p class="text-xs text-gray-500 mt-1">
-  Ejemplo: <code>+54 9 11 1234-5678</code> (incluye el <strong>+</strong> y el código de país)
+  <!-- Campo WhatsApp comentado: NO SE EJECUTA, pero no se borra
+  <label for="whatsapp" class="block text-sm font-medium text-gray-700">
+    WhatsApp (código internacional incluido)
+  </label>
+  <input 
+    type="tel" 
+    id="whatsapp"
+    name="whatsapp" 
+    placeholder="+54 9 11 1234-5678" 
+    pattern="^\+[0-9]{1,4}[\s\-]?[0-9\s\-]{6,}$"
+    title="Ingresa tu número completo con código de país. Ej: +54 9 11 1234-5678"
+    required 
+    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+    autocomplete="tel">
+  <p class="text-xs text-gray-500 mt-1">
+    Ejemplo: <code>+54 9 11 1234-5678</code> (incluye el <strong>+</strong> y el código de país)
+  </p>
+  -->
+
+  <input type="hidden" name="_next" value="https://maestriascristalinas.netlify.app/#gracias">
+
+  <button 
+    type="submit"
+    class="w-full bg-gradient-to-r from-indigo-400 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200">
+    Acceder a Clase Gratuita
+  </button>
+</form>
+
+<p class="text-xs text-gray-500 text-center mt-4">
+  Tu información está segura. Nunca compartiremos tus datos.
 </p>
-
-<input type="hidden" name="_next" value="https://maestriascristalinas.netlify.app/#gracias">
-
-      <button 
-        type="submit"
-        class="w-full bg-gradient-to-r from-indigo-400 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200">
-        Acceder a Clase Gratuita
-      </button>
-    </form>
-
-    <p class="text-xs text-gray-500 text-center mt-4">
-      Tu información está segura. Nunca compartiremos tus datos.
-    </p>
-  </div>
+</div>
 </section>
 
 <section id="gracias" class="py-20 text-center max-w-4xl mx-auto px-6">
@@ -558,27 +559,3 @@ src="https://www.facebook.com/tr?id=122911949702512&ev=PageView&noscript=1"
   
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
